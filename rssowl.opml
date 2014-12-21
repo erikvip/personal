@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml xmlns:rssowl="http://www.rssowl.org" version="1.1">
+  <head>
+    <title>RSSOwl Subscriptions</title>
+    <dateModified>Sun, 14 Dec 2014 07:25:11 MST</dateModified>
+  </head>
+  <body>
+    <outline text="My Feeds" rssowl:isSet="true" rssowl:id="7">
+      <outline text="Simply Recipes" xmlUrl="http://www.elise.com/recipes/index.rdf" rssowl:id="128">
+        <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="336" type="3" />
+      </outline>
+      <outline text="Internet" rssowl:isSet="false" rssowl:id="130">
+        <outline text="456 Berea Street" xmlUrl="http://www.456bereastreet.com/feed.xml" rssowl:id="131" />
+        <outline text="CSS Beauty News Feed" xmlUrl="http://www.cssbeauty.com/rss/news/" rssowl:id="132" />
+        <outline text="ReadWriteWeb" xmlUrl="http://www.readwriteweb.com/rss.xml" rssowl:id="134">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="403" type="3" />
+        </outline>
+        <outline text="SimpleBits" xmlUrl="http://www.simplebits.com/xml/rss.xml" rssowl:id="135" />
+        <outline text="Softpedia - Webmaster" xmlUrl="http://news.softpedia.com/newsRSS/Webmaster-4.xml" rssowl:id="136" />
+        <outline text="WebDeveloper.com" xmlUrl="http://www.webdeveloper.com/webdeveloper.rdf" rssowl:id="137">
+          <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Server returned HTTP Status 404 (Not Found)" type="5" />
+        </outline>
+        <outline text="WebReference News" xmlUrl="http://www.webreference.com/webreference.rdf" rssowl:id="138" />
+        <outline text="Webware.com" xmlUrl="http://www.webware.com/8300-1_109-2-0.xml" rssowl:id="139" />
+      </outline>
+      <outline text="News" rssowl:isSet="false" rssowl:id="140">
+        <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="8903" type="3" />
+        <outline text="TIME Magazine Online" xmlUrl="http://www.time.com/time/rss/top/0,20326,,00.xml" rssowl:id="142" />
+        <outline text="Top Stories - Google News" xmlUrl="http://news.google.com/?topic=h&amp;num=3&amp;output=rss" rssowl:id="143" />
+        <outline text="Yahoo! News" xmlUrl="http://rss.news.yahoo.com/rss/topstories" rssowl:id="144">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="11392" type="3" />
+        </outline>
+        <outline text="CNN" xmlUrl="http://xml.newsisfree.com/feeds/15/2315.xml" rssowl:id="242">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="8884" type="3" />
+        </outline>
+        <outline text="Google News" xmlUrl="http://news.google.com/news?pz=1&amp;cf=all&amp;output=rss" rssowl:id="243">
+          <rssowl:pref id="org.rssowl.pref.EnableNotifier" value="true" type="0" />
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="9166" type="3" />
+        </outline>
+      </outline>
+      <outline text="this WEEK in TECH" xmlUrl="http://leoville.tv/podcasts/twit.xml" rssowl:id="147">
+        <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="754" type="3" />
+      </outline>
+      <outline text="Science" rssowl:isSet="false" rssowl:id="148">
+        <outline text="Cognitive Daily" xmlUrl="http://scienceblogs.com/cognitivedaily/atom.xml" rssowl:id="149">
+          <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Server returned HTTP Status 404 (Not Found)" type="5" />
+        </outline>
+        <outline text="Cosmic Variance" xmlUrl="http://cosmicvariance.com/feed/" rssowl:id="150">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="1488" type="3" />
+        </outline>
+        <outline text="Forrester Research" xmlUrl="http://www.forrester.com/rss/custom/0,,1193712,00.xml" rssowl:id="151">
+          <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Server returned HTTP Status 404 (Not Found)" type="5" />
+        </outline>
+        <outline text="LifeSciencesWorld" xmlUrl="http://www.lifesciencesworld.com/newsletter.xml" rssowl:id="152" />
+        <outline text="NatureNews" xmlUrl="http://www.nature.com/news/rss.rdf" rssowl:id="155" />
+        <outline text="New Scientist" xmlUrl="http://www.newscientist.com/feed.ns?index=online-news" rssowl:id="156" />
+        <outline text="RealClimate" xmlUrl="http://www.realclimate.org/index.php/feed/atom/" rssowl:id="157" />
+        <outline text="Science: Current Issue" xmlUrl="http://www.sciencemag.org/rss/current.xml" rssowl:id="158" />
+        <outline text="Scientific American" xmlUrl="http://www.sciam.com/xml/sciam.xml" rssowl:id="159" />
+        <outline text="SPACE.com" xmlUrl="http://www.space.com/syn/space.xml" rssowl:id="160" />
+        <outline text="Tom's Astronomy Blog" xmlUrl="http://tomsastroblog.com/?feed=atom" rssowl:id="161">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="7571" type="3" />
+        </outline>
+        <outline text="Yahoo! News: Science News" xmlUrl="http://rss.news.yahoo.com/rss/science" rssowl:id="162" />
+      </outline>
+      <outline text="Slashdot" xmlUrl="http://slashdot.org/slashdot.rss" rssowl:id="163">
+        <rssowl:pref id="org.rssowl.pref.EnableNotifier" value="true" type="0" />
+        <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="11762" type="3" />
+      </outline>
+      <outline text="Technology" rssowl:isSet="false" rssowl:id="164">
+        <outline text="Programming Languages" rssowl:isSet="false" rssowl:id="177">
+          <outline text="CodeBetter.Com" xmlUrl="http://codebetter.com/blogs/MainFeed.aspx" rssowl:id="179" />
+          <outline text="Coding Horror" xmlUrl="http://www.codinghorror.com/blog/index.xml" rssowl:id="180" />
+          <outline text="dzone.com" xmlUrl="http://www.dzone.com/feed/frontpage/rss.xml" rssowl:id="181" />
+          <outline text="JavaScript Tips" xmlUrl="http://www.webreference.com/js/tips/channels/last1515.rdf" rssowl:id="183" />
+          <outline text="jQuery Blog" xmlUrl="http://jquery.com/blog/feed/" rssowl:id="184" />
+          <outline text="PHP News" xmlUrl="http://www.php.net/news.rss" rssowl:id="185" />
+          <outline text="PHPBuilder.com" xmlUrl="http://phpbuilder.com/rss_feed.php?type=articles&amp;limit=20" rssowl:id="186" />
+          <outline text="programming" xmlUrl="http://programming.reddit.com/.rss" rssowl:id="188" />
+          <outline text="QuirksBlog" xmlUrl="http://www.quirksmode.org/blog/atom.xml" rssowl:id="190" />
+          <outline text="Servlets.com" xmlUrl="http://www.servlets.com/blog/index.rss" rssowl:id="191" />
+        </outline>
+        <outline text="Security" rssowl:isSet="false" rssowl:id="192">
+          <outline text="Computer World Security Knowledge Center" xmlUrl="http://www.computerworld.com/news/xml/0,5000,73,00.xml" rssowl:id="193">
+            <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Server returned HTTP Status 404 (Not Found)" type="5" />
+          </outline>
+          <outline text="Darknet - The Darkside" xmlUrl="http://feeds.feedburner.com/darknethackers" rssowl:id="194" />
+          <outline text="F-Secure Antivirus Research Weblog" xmlUrl="http://www.f-secure.com/weblog/weblog.rdf" rssowl:id="195" />
+          <outline text="ha.ckers.org web application security lab" xmlUrl="http://ha.ckers.org/blog/feed/" rssowl:id="196" />
+          <outline text="Schneier on Security" xmlUrl="http://www.schneier.com/blog/index.rdf" rssowl:id="197" />
+          <outline text="SecurityFocus News" xmlUrl="http://www.securityfocus.com/rss/news.xml" rssowl:id="198" />
+          <outline text="TaoSecurity" xmlUrl="http://taosecurity.blogspot.com/atom.xml" rssowl:id="199" />
+        </outline>
+        <outline text="Anand Tech" xmlUrl="http://www.anandtech.com/rss/articlefeed.aspx" rssowl:id="210" />
+        <outline text="Ars Technica" xmlUrl="http://arstechnica.com/index.ars/rss" rssowl:id="211" />
+        <outline text="BBC News | Technology | World Edition" xmlUrl="http://news.bbc.co.uk/rss/newsonline_world_edition/technology/rss091.xml" rssowl:id="212" />
+        <outline text="CNET News" xmlUrl="http://rss.com.com/2547-12-0-20.xml" rssowl:id="213">
+          <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Invalid or Malformed Feed" type="5" />
+        </outline>
+        <outline text="Computer World" xmlUrl="http://www.computerworld.com/news/xml/10/0,5009,,00.xml" rssowl:id="214">
+          <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Server returned HTTP Status 404 (Not Found)" type="5" />
+        </outline>
+        <outline text="digg - tech news" xmlUrl="http://digg.com/rss/index.xml" rssowl:id="215" />
+        <outline text="Digital Photography Review" xmlUrl="http://www.dpreview.com/news/dpr.rdf" rssowl:id="216">
+          <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Server returned HTTP Status 404 (Not Found)" type="5" />
+        </outline>
+        <outline text="eWEEK Technology News" xmlUrl="http://rssnewsapps.ziffdavis.com/tech.xml" rssowl:id="217" />
+        <outline text="IRC-Junkie.org - IRC News" xmlUrl="http://www.irc-junkie.org/feed/" rssowl:id="218" />
+        <outline text="Joel on Software" xmlUrl="http://www.joelonsoftware.com/rss.xml" rssowl:id="219" />
+        <outline text="MAKE: Blog" xmlUrl="http://www.makezine.com/blog/index.rdf" rssowl:id="220">
+          <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Server returned HTTP Status 404 (Not Found)" type="5" />
+        </outline>
+        <outline text="Planet Eclipse" xmlUrl="http://www.planeteclipse.org/planet/atom.xml" rssowl:id="221" />
+        <outline text="Shacknews" xmlUrl="http://www.shacknews.com/rss?recent_articles=1" rssowl:id="222" />
+        <outline text="Softpedia Gadgets News" xmlUrl="http://gadgets.softpedia.com/newsRSS/Global-0.xml" rssowl:id="223">
+          <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Unable to Resolve the Host" type="5" />
+        </outline>
+        <outline text="Softpedia News" xmlUrl="http://news.softpedia.com/newsRSS/Global-0.xml" rssowl:id="224" />
+        <outline text="Wired News" xmlUrl="http://www.wired.com/news_drop/netcenter/netcenter.rdf" rssowl:id="225">
+          <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Server returned HTTP Status 503 (Service Unavailable)" type="5" />
+        </outline>
+        <outline text="ZDNet News - Front Door" xmlUrl="http://news.zdnet.com/2509-1_22-0-20.xml" rssowl:id="226">
+          <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Server returned HTTP Status 404 (Not Found)" type="5" />
+        </outline>
+        <outline text="Gizmodo" xmlUrl="http://www.gizmodo.com/index.xml" rssowl:id="245" />
+        <outline text="Engadget" xmlUrl="http://www.engadget.com/rss.xml" rssowl:id="244">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="8614" type="3" />
+        </outline>
+      </outline>
+      <outline text="Weblogs" rssowl:isSet="false" rssowl:id="227">
+        <outline text="A List Apart" xmlUrl="http://www.alistapart.com/site/rss" rssowl:id="228">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="7389" type="3" />
+        </outline>
+        <outline text="Anil Dash" xmlUrl="http://www.dashes.com/anil/index.rdf" rssowl:id="229">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="7493" type="3" />
+        </outline>
+        <outline text="Lifehacker" xmlUrl="http://www.lifehacker.com/index.xml" rssowl:id="235" />
+        <outline text="The Official Google Blog" xmlUrl="http://feeds.feedburner.com/blogspot/MKuf" rssowl:id="239" />
+      </outline>
+      <rssowl:savedsearch name="Unread News" matchAllConditions="true" rssowl:id="246">
+        <rssowl:searchcondition>
+          <rssowl:searchspecifier id="0" />
+          <rssowl:searchvalue type="7">
+            <rssowl:newsstate value="0" />
+            <rssowl:newsstate value="2" />
+            <rssowl:newsstate value="3" />
+          </rssowl:searchvalue>
+          <rssowl:searchfield id="14" entity="org.rssowl.core.persist.INews" />
+        </rssowl:searchcondition>
+      </rssowl:savedsearch>
+      <rssowl:savedsearch name="Todays News" matchAllConditions="true" rssowl:id="248">
+        <rssowl:searchcondition>
+          <rssowl:searchspecifier id="9" />
+          <rssowl:searchvalue type="4" value="1" />
+          <rssowl:searchfield id="18" entity="org.rssowl.core.persist.INews" />
+        </rssowl:searchcondition>
+        <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="11393" type="3" />
+      </rssowl:savedsearch>
+      <rssowl:savedsearch name="Sticky News" matchAllConditions="true" rssowl:id="252">
+        <rssowl:searchcondition>
+          <rssowl:searchspecifier id="0" />
+          <rssowl:searchvalue type="6" value="true" />
+          <rssowl:searchfield id="13" entity="org.rssowl.core.persist.INews" />
+        </rssowl:searchcondition>
+      </rssowl:savedsearch>
+      <rssowl:savedsearch name="Labeled News" matchAllConditions="false" rssowl:id="254">
+        <rssowl:searchcondition>
+          <rssowl:searchspecifier id="0" />
+          <rssowl:searchvalue type="7" value="*" />
+          <rssowl:searchfield id="15" entity="org.rssowl.core.persist.INews" />
+        </rssowl:searchcondition>
+        <rssowl:pref id="org.rssowl.pref.BMNewsGrouping" value="7" type="1" />
+      </rssowl:savedsearch>
+      <outline text="Urban Terror News" xmlUrl="feed://www.urbanterror.info/rss/news/all" rssowl:id="11012">
+        <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="11013" type="3" />
+      </outline>
+    </outline>
+    <rssowl:label id="2" name="Work" order="1" color="200,118,10" />
+    <rssowl:label id="1" name="Important" order="0" color="163,21,2" />
+    <rssowl:label id="4" name="To Do" order="3" color="92,101,126" />
+    <rssowl:label id="3" name="Personal" order="2" color="82,92,58" />
+    <rssowl:label id="5" name="Later" order="4" color="82,16,0" />
+    <rssowl:pref id="org.rssowl.ui.FirstStartToken" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.UseMasterPassword" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.UseOSPassword" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.RememberPassword" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.MarkNewsReadOnMinimize" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.MarkNewsReadOnScrolling" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.MarkFeedReadOnChange" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.MarkNewsReadOnTabClose" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.MarkDuplicateNewsRead" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.DisableJavaScript" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.DisableJavaScriptExceptions" value="slashdot.org" type="6" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.UseExternalBrowser" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.UseCustomExternalBrowser" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.CustomBrowserPath" value="" type="5" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.ReopenBrowserTabs" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.UseSystemTray" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.TrayOnExit" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.TrayOnStart" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.RestoreTrayDoubleclick" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.MarkReadState" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.MarkReadInMillis" value="0" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.DelNewsByCountState" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.DelNewsByCountValue" value="200" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.DelNewsByAgeState" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.DelNewsByAgeValue" value="30" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.DelReadNewsState" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.NeverDelUnreadNewsState" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.NeverDelLabeledNewsState" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.BMNewsColumns" value="0,1,9" type="2" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.BMNewsSortColumn" value="1" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.BMNewsSortAscending" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.BMUpdateInterval" value="1800" type="3" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.BMUpdateIntervalState" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.BMOpenOnStartup" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.BMReloadOnStartup" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.ui.internal.editors.feed.SearchTarget" value="1" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.ui.internal.editors.feed.GroupType" value="0" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.ui.internal.editors.feed.FilterType" value="0" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.ui.internal.editors.feed.SashFormWeights" value="344,651" type="2" kind="0" />
+    <rssowl:pref id="org.rssowl.ui.internal.editors.feed.Layout" value="0" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.ui.internal.editors.feed.HighlightSearchResults" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.ui.internal.editors.feed.FeedToolBarHidden" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.ui.internal.editors.feed.BrowserToolBarHidden" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.ui.internal.views.explorer.BeginSearchOnTyping" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.ui.internal.views.explorer.AlwaysShowSearch" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.ui.internal.views.explorer.SortByName" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.ui.internal.views.explorer.FilterType" value="0" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.ui.internal.views.explorer.GroupingType" value="0" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.ui.internal.views.explorer.EnableLinking" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.ui.internal.views.explorer.DisableFavicons" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.BMNewsFiltering" value="-1" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.BMNewsGrouping" value="0" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.BMLoadImages" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.EnableImages" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.EnableMedia" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.BMOpenSiteForNews" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.OpenSiteForEmptyNews" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.UseTransformer" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.TransformerIdentifier" value="org.rssowl.ui.InstapaperTransformer" type="5" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.ShowNotificationPoup" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.ShowNotificationPoupOnlyWhenMinimized" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.StickyNotificationPoup" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.AutoCloseNotificationPoupValue" value="10" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.LimitNotificationPoup" value="10" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.LimitNotifierToSelection" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.CloseNotifierOnOpen" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.FadeNotifier" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.ShowExcerptInNotifier" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.AlwaysReuseFeedView" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.AlwaysReuseBrowser" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.OpenLinksInNewTab" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.CleanUpBMByLastVisitState" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.CleanUpBMByLastVisitValue" value="30" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.CleanUpBMByLastUpdateState" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.CleanUpBMByLastUpdateValue" value="30" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.CleanUpBMByConError" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.CleanUpBMBySynchronization" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.CleanUpBMByDuplicates" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.CleanUpNewsByCountState" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.CleanUpNewsByCountValue" value="200" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.CleanUpNewsByAgeState" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.CleanUpNewsByAgeValue" value="30" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.CleanUpReadNewsState" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.CleanUpNeverDelUnreadNewsState" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.CleanUpNeverDelLabeledNewsState" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.CleanUpReminderDateMillies" value="1420804026015" type="3" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.CleanUpReminderState" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.CleanUpReminderDaysValue" value="30" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.CleanUpIndex" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.SearchDialogPreviewVisible" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.SearchDialogNewsColumns" value="12,0,11,1,5,6,9" type="2" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.SearchDialogNewsSortColumn" value="12" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.SearchDialogNewsSortAscending" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.ShowToolbar" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.ShowStatus" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.BMLoadTitleFromFeed" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.OpenBrowserInBackground" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.ShareProviderState" value="-3,-5,-1,-6,-7,-24,-8,-19,-9,-10,-12,-13,-4,-14,-15,-16,-17,-11,-18,-20,-21,-2,-22,-23,-25,-26,-27,-28,-29" type="2" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.HideCompletedDownloads" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.ToolbarItems" value="2,0,5,6,0,7,8,0,10,0,11,12,0,39,0,13,14,0,20,0,15,16" type="2" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.ToolbarMode" value="0" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.DefaultNextAction" value="1" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.DefaultPreviousAction" value="5" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.BMMenuFilter" value="0" type="1" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.UpdateOnStartup" value="true" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.RememberAggregateNewsOption" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.AggregateNewsAsSearch" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.LocalizedFeedSearch" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.JSInfobarClosed" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.EnableIEPopupBlocker" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.ArchiveBinMarker" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.NewsBrowserPageSize" value="50" type="1" kind="0" />
+    <rssowl:pref id="instance/org.eclipse.ui.workbench/OPEN_ON_SINGLE_CLICK" value="true" type="0" kind="1" />
+    <rssowl:pref id="instance/org.eclipse.ui.workbench/USE_IPERSISTABLE_EDITORS" value="true" type="0" kind="1" />
+    <rssowl:pref id="instance/org.eclipse.ui/SHOW_MULTIPLE_EDITOR_TABS" value="true" type="0" kind="1" />
+    <rssowl:pref id="instance/org.eclipse.ui.workbench/REUSE_OPEN_EDITORS_BOOLEAN" value="false" type="0" kind="1" />
+    <rssowl:pref id="instance/org.eclipse.ui.workbench/REUSE_OPEN_EDITORS" value="5" type="1" kind="1" />
+    <rssowl:pref id="/configuration/org.eclipse.core.net/proxiesEnabled" value="false" type="0" kind="1" />
+    <rssowl:pref id="/configuration/org.eclipse.core.net/systemProxiesEnabled" value="false" type="0" kind="1" />
+    <rssowl:pref id="/configuration/org.eclipse.core.net/proxyData/HTTP/hasAuth" value="false" type="0" kind="1" />
+    <rssowl:pref id="/configuration/org.eclipse.core.net/proxyData/HTTPS/hasAuth" value="false" type="0" kind="1" />
+    <rssowl:pref id="/configuration/org.eclipse.core.net/proxyData/SOCKS/hasAuth" value="false" type="0" kind="1" />
+    <rssowl:pref id="instance/org.eclipse.ui.workbench/org.rssowl.ui.NewsTextFont" value="1|Fixedsys|11.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Fixedsys;" type="5" kind="1" />
+    <rssowl:pref id="instance/org.eclipse.ui.workbench/org.rssowl.ui.HeadlinesFont" value="1|Tahoma|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|0|3|2|1|34|Tahoma;" type="5" kind="1" />
+    <rssowl:pref id="instance/org.eclipse.ui.workbench/org.rssowl.ui.NewsListBackgroundColor" value="243,243,243" type="5" kind="1" />
+    <rssowl:pref id="instance/org.eclipse.ui.workbench/org.eclipse.ui.commands" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xD;&#xA;&lt;org.eclipse.ui.commands&gt;&#xD;&#xA;&lt;keyBinding commandId=&quot;org.eclipse.ui.navigate.next&quot; contextId=&quot;org.eclipse.ui.contexts.window&quot; keyConfigurationId=&quot;org.rssowl.ui.KeyScheme&quot; keySequence=&quot;N&quot;/&gt;&#xD;&#xA;&lt;/org.eclipse.ui.commands&gt;" type="5" kind="1" />
+  </body>
+</opml>
+
