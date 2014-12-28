@@ -2,142 +2,195 @@
 <opml xmlns:rssowl="http://www.rssowl.org" version="1.1">
   <head>
     <title>RSSOwl Subscriptions</title>
-    <dateModified>Sun, 14 Dec 2014 07:25:11 MST</dateModified>
+    <dateModified>Sat, 27 Dec 2014 21:05:29 MST</dateModified>
   </head>
   <body>
     <outline text="My Feeds" rssowl:isSet="true" rssowl:id="7">
-      <outline text="Simply Recipes" xmlUrl="http://www.elise.com/recipes/index.rdf" rssowl:id="128">
-        <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="336" type="3" />
-      </outline>
-      <outline text="Internet" rssowl:isSet="false" rssowl:id="130">
-        <outline text="456 Berea Street" xmlUrl="http://www.456bereastreet.com/feed.xml" rssowl:id="131" />
-        <outline text="CSS Beauty News Feed" xmlUrl="http://www.cssbeauty.com/rss/news/" rssowl:id="132" />
-        <outline text="ReadWriteWeb" xmlUrl="http://www.readwriteweb.com/rss.xml" rssowl:id="134">
-          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="403" type="3" />
-        </outline>
-        <outline text="SimpleBits" xmlUrl="http://www.simplebits.com/xml/rss.xml" rssowl:id="135" />
-        <outline text="Softpedia - Webmaster" xmlUrl="http://news.softpedia.com/newsRSS/Webmaster-4.xml" rssowl:id="136" />
-        <outline text="WebDeveloper.com" xmlUrl="http://www.webdeveloper.com/webdeveloper.rdf" rssowl:id="137">
-          <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Server returned HTTP Status 404 (Not Found)" type="5" />
-        </outline>
-        <outline text="WebReference News" xmlUrl="http://www.webreference.com/webreference.rdf" rssowl:id="138" />
-        <outline text="Webware.com" xmlUrl="http://www.webware.com/8300-1_109-2-0.xml" rssowl:id="139" />
-      </outline>
-      <outline text="News" rssowl:isSet="false" rssowl:id="140">
+      <outline text="General News" rssowl:isSet="false" rssowl:id="16013">
         <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="8903" type="3" />
-        <outline text="TIME Magazine Online" xmlUrl="http://www.time.com/time/rss/top/0,20326,,00.xml" rssowl:id="142" />
-        <outline text="Top Stories - Google News" xmlUrl="http://news.google.com/?topic=h&amp;num=3&amp;output=rss" rssowl:id="143" />
-        <outline text="Yahoo! News" xmlUrl="http://rss.news.yahoo.com/rss/topstories" rssowl:id="144">
-          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="11392" type="3" />
+        <outline text="TIME Magazine Online" xmlUrl="http://www.time.com/time/rss/top/0,20326,,00.xml" rssowl:id="16014" />
+        <outline text="Top Stories - Google News" xmlUrl="http://news.google.com/?topic=h&amp;num=3&amp;output=rss" rssowl:id="16015" />
+        <outline text="Yahoo! News" xmlUrl="http://rss.news.yahoo.com/rss/topstories" rssowl:id="16016">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="16360" type="3" />
         </outline>
-        <outline text="CNN" xmlUrl="http://xml.newsisfree.com/feeds/15/2315.xml" rssowl:id="242">
-          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="8884" type="3" />
-        </outline>
-        <outline text="Google News" xmlUrl="http://news.google.com/news?pz=1&amp;cf=all&amp;output=rss" rssowl:id="243">
+        <outline text="CNN" xmlUrl="http://xml.newsisfree.com/feeds/15/2315.xml" rssowl:id="16017" />
+        <outline text="Google News" xmlUrl="http://news.google.com/news?pz=1&amp;cf=all&amp;output=rss" rssowl:id="16018">
           <rssowl:pref id="org.rssowl.pref.EnableNotifier" value="true" type="0" />
-          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="9166" type="3" />
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="16337" type="3" />
         </outline>
-      </outline>
-      <outline text="this WEEK in TECH" xmlUrl="http://leoville.tv/podcasts/twit.xml" rssowl:id="147">
-        <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="754" type="3" />
-      </outline>
-      <outline text="Science" rssowl:isSet="false" rssowl:id="148">
-        <outline text="Cognitive Daily" xmlUrl="http://scienceblogs.com/cognitivedaily/atom.xml" rssowl:id="149">
-          <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Server returned HTTP Status 404 (Not Found)" type="5" />
-        </outline>
-        <outline text="Cosmic Variance" xmlUrl="http://cosmicvariance.com/feed/" rssowl:id="150">
-          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="1488" type="3" />
-        </outline>
-        <outline text="Forrester Research" xmlUrl="http://www.forrester.com/rss/custom/0,,1193712,00.xml" rssowl:id="151">
-          <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Server returned HTTP Status 404 (Not Found)" type="5" />
-        </outline>
-        <outline text="LifeSciencesWorld" xmlUrl="http://www.lifesciencesworld.com/newsletter.xml" rssowl:id="152" />
-        <outline text="NatureNews" xmlUrl="http://www.nature.com/news/rss.rdf" rssowl:id="155" />
-        <outline text="New Scientist" xmlUrl="http://www.newscientist.com/feed.ns?index=online-news" rssowl:id="156" />
-        <outline text="RealClimate" xmlUrl="http://www.realclimate.org/index.php/feed/atom/" rssowl:id="157" />
-        <outline text="Science: Current Issue" xmlUrl="http://www.sciencemag.org/rss/current.xml" rssowl:id="158" />
-        <outline text="Scientific American" xmlUrl="http://www.sciam.com/xml/sciam.xml" rssowl:id="159" />
-        <outline text="SPACE.com" xmlUrl="http://www.space.com/syn/space.xml" rssowl:id="160" />
-        <outline text="Tom's Astronomy Blog" xmlUrl="http://tomsastroblog.com/?feed=atom" rssowl:id="161">
-          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="7571" type="3" />
-        </outline>
-        <outline text="Yahoo! News: Science News" xmlUrl="http://rss.news.yahoo.com/rss/science" rssowl:id="162" />
-      </outline>
-      <outline text="Slashdot" xmlUrl="http://slashdot.org/slashdot.rss" rssowl:id="163">
-        <rssowl:pref id="org.rssowl.pref.EnableNotifier" value="true" type="0" />
-        <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="11762" type="3" />
-      </outline>
-      <outline text="Technology" rssowl:isSet="false" rssowl:id="164">
-        <outline text="Programming Languages" rssowl:isSet="false" rssowl:id="177">
-          <outline text="CodeBetter.Com" xmlUrl="http://codebetter.com/blogs/MainFeed.aspx" rssowl:id="179" />
-          <outline text="Coding Horror" xmlUrl="http://www.codinghorror.com/blog/index.xml" rssowl:id="180" />
-          <outline text="dzone.com" xmlUrl="http://www.dzone.com/feed/frontpage/rss.xml" rssowl:id="181" />
-          <outline text="JavaScript Tips" xmlUrl="http://www.webreference.com/js/tips/channels/last1515.rdf" rssowl:id="183" />
-          <outline text="jQuery Blog" xmlUrl="http://jquery.com/blog/feed/" rssowl:id="184" />
-          <outline text="PHP News" xmlUrl="http://www.php.net/news.rss" rssowl:id="185" />
-          <outline text="PHPBuilder.com" xmlUrl="http://phpbuilder.com/rss_feed.php?type=articles&amp;limit=20" rssowl:id="186" />
-          <outline text="programming" xmlUrl="http://programming.reddit.com/.rss" rssowl:id="188" />
-          <outline text="QuirksBlog" xmlUrl="http://www.quirksmode.org/blog/atom.xml" rssowl:id="190" />
-          <outline text="Servlets.com" xmlUrl="http://www.servlets.com/blog/index.rss" rssowl:id="191" />
-        </outline>
-        <outline text="Security" rssowl:isSet="false" rssowl:id="192">
-          <outline text="Computer World Security Knowledge Center" xmlUrl="http://www.computerworld.com/news/xml/0,5000,73,00.xml" rssowl:id="193">
-            <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Server returned HTTP Status 404 (Not Found)" type="5" />
+        <outline text="Science" rssowl:isSet="false" rssowl:id="16019">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="17582" type="3" />
+          <outline text="LifeSciencesWorld" xmlUrl="http://www.lifesciencesworld.com/newsletter.xml" rssowl:id="16020" />
+          <outline text="NatureNews" xmlUrl="http://www.nature.com/news/rss.rdf" rssowl:id="16021" />
+          <outline text="New Scientist" xmlUrl="http://www.newscientist.com/feed.ns?index=online-news" rssowl:id="16022" />
+          <outline text="RealClimate" xmlUrl="http://www.realclimate.org/index.php/feed/atom/" rssowl:id="16023" />
+          <outline text="Science: Current Issue" xmlUrl="http://www.sciencemag.org/rss/current.xml" rssowl:id="16024" />
+          <outline text="Scientific American" xmlUrl="http://www.sciam.com/xml/sciam.xml" rssowl:id="16025" />
+          <outline text="SPACE.com" xmlUrl="http://www.space.com/syn/space.xml" rssowl:id="16026" />
+          <outline text="Tom's Astronomy Blog" xmlUrl="http://tomsastroblog.com/?feed=atom" rssowl:id="16027">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="7571" type="3" />
           </outline>
-          <outline text="Darknet - The Darkside" xmlUrl="http://feeds.feedburner.com/darknethackers" rssowl:id="194" />
-          <outline text="F-Secure Antivirus Research Weblog" xmlUrl="http://www.f-secure.com/weblog/weblog.rdf" rssowl:id="195" />
-          <outline text="ha.ckers.org web application security lab" xmlUrl="http://ha.ckers.org/blog/feed/" rssowl:id="196" />
-          <outline text="Schneier on Security" xmlUrl="http://www.schneier.com/blog/index.rdf" rssowl:id="197" />
-          <outline text="SecurityFocus News" xmlUrl="http://www.securityfocus.com/rss/news.xml" rssowl:id="198" />
-          <outline text="TaoSecurity" xmlUrl="http://taosecurity.blogspot.com/atom.xml" rssowl:id="199" />
+          <outline text="Yahoo! News: Science News" xmlUrl="http://rss.news.yahoo.com/rss/science" rssowl:id="16028" />
         </outline>
-        <outline text="Anand Tech" xmlUrl="http://www.anandtech.com/rss/articlefeed.aspx" rssowl:id="210" />
-        <outline text="Ars Technica" xmlUrl="http://arstechnica.com/index.ars/rss" rssowl:id="211" />
-        <outline text="BBC News | Technology | World Edition" xmlUrl="http://news.bbc.co.uk/rss/newsonline_world_edition/technology/rss091.xml" rssowl:id="212" />
-        <outline text="CNET News" xmlUrl="http://rss.com.com/2547-12-0-20.xml" rssowl:id="213">
-          <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Invalid or Malformed Feed" type="5" />
+        <outline text="msnbc.com Latest Headlines" xmlUrl="feed://www.msnbc.com/feeds/latest" rssowl:id="16029">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="16315" type="3" />
         </outline>
-        <outline text="Computer World" xmlUrl="http://www.computerworld.com/news/xml/10/0,5009,,00.xml" rssowl:id="214">
-          <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Server returned HTTP Status 404 (Not Found)" type="5" />
-        </outline>
-        <outline text="digg - tech news" xmlUrl="http://digg.com/rss/index.xml" rssowl:id="215" />
-        <outline text="Digital Photography Review" xmlUrl="http://www.dpreview.com/news/dpr.rdf" rssowl:id="216">
-          <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Server returned HTTP Status 404 (Not Found)" type="5" />
-        </outline>
-        <outline text="eWEEK Technology News" xmlUrl="http://rssnewsapps.ziffdavis.com/tech.xml" rssowl:id="217" />
-        <outline text="IRC-Junkie.org - IRC News" xmlUrl="http://www.irc-junkie.org/feed/" rssowl:id="218" />
-        <outline text="Joel on Software" xmlUrl="http://www.joelonsoftware.com/rss.xml" rssowl:id="219" />
-        <outline text="MAKE: Blog" xmlUrl="http://www.makezine.com/blog/index.rdf" rssowl:id="220">
-          <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Server returned HTTP Status 404 (Not Found)" type="5" />
-        </outline>
-        <outline text="Planet Eclipse" xmlUrl="http://www.planeteclipse.org/planet/atom.xml" rssowl:id="221" />
-        <outline text="Shacknews" xmlUrl="http://www.shacknews.com/rss?recent_articles=1" rssowl:id="222" />
-        <outline text="Softpedia Gadgets News" xmlUrl="http://gadgets.softpedia.com/newsRSS/Global-0.xml" rssowl:id="223">
-          <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Unable to Resolve the Host" type="5" />
-        </outline>
-        <outline text="Softpedia News" xmlUrl="http://news.softpedia.com/newsRSS/Global-0.xml" rssowl:id="224" />
-        <outline text="Wired News" xmlUrl="http://www.wired.com/news_drop/netcenter/netcenter.rdf" rssowl:id="225">
-          <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Server returned HTTP Status 503 (Service Unavailable)" type="5" />
-        </outline>
-        <outline text="ZDNet News - Front Door" xmlUrl="http://news.zdnet.com/2509-1_22-0-20.xml" rssowl:id="226">
-          <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Server returned HTTP Status 404 (Not Found)" type="5" />
-        </outline>
-        <outline text="Gizmodo" xmlUrl="http://www.gizmodo.com/index.xml" rssowl:id="245" />
-        <outline text="Engadget" xmlUrl="http://www.engadget.com/rss.xml" rssowl:id="244">
-          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="8614" type="3" />
+        <outline text="SLC - Utah" rssowl:isSet="false" rssowl:id="16030">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="8903" type="3" />
+          <outline text="KSL / Utah / Local Stories" xmlUrl="feed://www.ksl.com/xml/148.rss" rssowl:id="16031" />
+          <outline text="deseretnews.com - Top Stories" xmlUrl="feed://www.deseretnews.com/home/index.rss" rssowl:id="16032">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="17460" type="3" />
+          </outline>
+          <outline text="All - The Salt Lake Tribune" xmlUrl="feed://www.sltrib.com/csp/cms/sites/sltrib/RSS/rssvalid.csp?cat=All" rssowl:id="16033">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="17492" type="3" />
+          </outline>
+          <outline text="thespectrum.com - Local News" xmlUrl="feed://archive.thespectrum.com/section/rss&amp;mime=xml" rssowl:id="16034">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="8903" type="3" />
+          </outline>
+          <outline text="NYT &gt; Utah" xmlUrl="feed://topics.nytimes.com/top/news/national/usstatesterritoriesandpossessions/utah/index.html?inline=nyt-geo&amp;rss=1" rssowl:id="16035">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="17472" type="3" />
+          </outline>
+          <outline text="Utah.gov News Provider" xmlUrl="feed://www.utah.gov/whatsnew/rss.xml" rssowl:id="16036" />
+          <outline text="Utah State Legislature News" xmlUrl="feed://le.utah.gov/rss/utleg.xml" rssowl:id="16037">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="8903" type="3" />
+          </outline>
         </outline>
       </outline>
-      <outline text="Weblogs" rssowl:isSet="false" rssowl:id="227">
-        <outline text="A List Apart" xmlUrl="http://www.alistapart.com/site/rss" rssowl:id="228">
+      <outline text="Slashdot" xmlUrl="http://slashdot.org/slashdot.rss" rssowl:id="16038">
+        <rssowl:pref id="org.rssowl.pref.EnableNotifier" value="true" type="0" />
+        <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="40010" type="3" />
+      </outline>
+      <outline text="Photos" rssowl:isSet="false" rssowl:id="16039">
+        <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="48799" type="3" />
+        <outline text="Artwork" rssowl:isSet="false" rssowl:id="16055">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="18564" type="3" />
+          <outline text="DeviantArt: Vandrell's Journals" xmlUrl="feed://backend.deviantart.com/rss.xml?q=by%3AVandrell&amp;type=journal&amp;formatted=1" rssowl:id="16056">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="34475" type="3" />
+          </outline>
+          <outline text="DeviantArt: Popular in the last 1 day" xmlUrl="feed://backend.deviantart.com/rss.xml?q=boost%3Apopular+meta%3Aall+max_age%3A24h&amp;type=deviation" rssowl:id="16057">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="56512" type="3" />
+          </outline>
+          <outline text="DeviantArt: gallery:DanteWontDie/26123619" xmlUrl="feed://backend.deviantart.com/rss.xml?q=gallery%3ADanteWontDie%2F26123619&amp;type=deviation" rssowl:id="16058" />
+          <outline text="DeviantArt: gallery:ifreex/9574652" xmlUrl="feed://backend.deviantart.com/rss.xml?q=gallery%3Aifreex%2F9574652&amp;type=deviation" rssowl:id="16059">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="39485" type="3" />
+          </outline>
+          <outline text="Top downloaded wallpapers | WallpaperUP" xmlUrl="feed://www.wallpaperup.com/rss/top_downloaded" rssowl:id="16060">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="40223" type="3" />
+          </outline>
+          <outline text="Top rated wallpapers | WallpaperUP" xmlUrl="feed://www.wallpaperup.com/rss/top_rated" rssowl:id="16061">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="40302" type="3" />
+          </outline>
+          <outline text="Latest | WallpaperUP" xmlUrl="feed://www.wallpaperup.com/rss/latest" rssowl:id="16062">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="42828" type="3" />
+          </outline>
+        </outline>
+        <outline text="Misc" rssowl:isSet="false" rssowl:id="34586">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="48799" type="3" />
+          <outline text="Animal of the day" xmlUrl="feed://feeds.feedburner.com/animals" rssowl:id="16053" />
+          <outline text="Astronomy Picture of the Day" xmlUrl="feed://apod.nasa.gov/apod.rss" rssowl:id="16040">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="48799" type="3" />
+          </outline>
+          <outline text="BBC News - In Pictures" xmlUrl="feed://feeds.bbci.co.uk/news/in_pictures/rss.xml" rssowl:id="16051">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="48799" type="3" />
+          </outline>
+          <outline text="Daily Animal Wallpaper" xmlUrl="feed://www.w3wallpapers.com/wotd_animal.php" rssowl:id="16041">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="48799" type="3" />
+          </outline>
+          <outline text="Daily Nature Wallpaper" xmlUrl="feed://www.w3wallpapers.com/wotd.php" rssowl:id="16042">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="29843" type="3" />
+          </outline>
+          <outline text="Daily Space Wallpaper" xmlUrl="feed://www.w3wallpapers.com/wotd_space.php" rssowl:id="16043">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="29834" type="3" />
+          </outline>
+          <outline text="Daily Underwater Wallpaper" xmlUrl="feed://www.w3wallpapers.com/wotd_underwater.php" rssowl:id="16044">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="29837" type="3" />
+          </outline>
+          <outline text="David Kleinert Photography" xmlUrl="feed://davidkphotography.com/index.php?x=rss" rssowl:id="16052">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="48799" type="3" />
+          </outline>
+          <outline text="Latest wallpapers" xmlUrl="feed://www.w3wallpapers.com/rss/latest_wallpapers" rssowl:id="16045">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="29853" type="3" />
+          </outline>
+          <outline text="LightBox" xmlUrl="feed://feeds.feedburner.com/time/photoessays?format=xml" rssowl:id="16054">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="30767" type="3" />
+          </outline>
+          <outline text="Livescience.com - Iod" xmlUrl="feed://feeds.feedburner.com/LivesciencecomImageOfTheDay" rssowl:id="16046">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="29803" type="3" />
+          </outline>
+          <outline text="NASA Image of the Day" xmlUrl="feed://www.nasa.gov/rss/dyn/image_of_the_day.rss" rssowl:id="16049">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="48799" type="3" />
+          </outline>
+          <outline text="National Geographic Photo of the Day" xmlUrl="feed://feeds.nationalgeographic.com/ng/photography/photo-of-the-day" rssowl:id="16048">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="48799" type="3" />
+          </outline>
+          <outline text="The Big Picture" xmlUrl="feed://www.boston.com/partners/rss/bigpicture.xml" rssowl:id="16050">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="48799" type="3" />
+          </outline>
+          <outline text="Top wallpapers" xmlUrl="feed://www.w3wallpapers.com/rss/top_wallpapers" rssowl:id="16047">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="29861" type="3" />
+          </outline>
+        </outline>
+        <outline text="Funny Pics" rssowl:isSet="false" rssowl:id="34374">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="19568" type="3" />
+          <outline text="AcidCow.com - The One and Only" xmlUrl="http://feeds.feedburner.com/acidcow_com" rssowl:id="34376">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="19568" type="3" />
+          </outline>
+          <outline text="Angry Duck» AngryDuck Funny Pictures" xmlUrl="http://www.angryduck.com/feed/" rssowl:id="34468">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="19568" type="3" />
+          </outline>
+        </outline>
+      </outline>
+      <outline text="Weblogs" rssowl:isSet="false" rssowl:id="16063">
+        <outline text="A List Apart" xmlUrl="http://www.alistapart.com/site/rss" rssowl:id="16064">
           <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="7389" type="3" />
         </outline>
-        <outline text="Anil Dash" xmlUrl="http://www.dashes.com/anil/index.rdf" rssowl:id="229">
-          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="7493" type="3" />
+        <outline text="Anil Dash" xmlUrl="http://www.dashes.com/anil/index.rdf" rssowl:id="16065">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="18777" type="3" />
         </outline>
-        <outline text="Lifehacker" xmlUrl="http://www.lifehacker.com/index.xml" rssowl:id="235" />
-        <outline text="The Official Google Blog" xmlUrl="http://feeds.feedburner.com/blogspot/MKuf" rssowl:id="239" />
+        <outline text="Lifehacker" xmlUrl="http://www.lifehacker.com/index.xml" rssowl:id="16066" />
+        <outline text="The Official Google Blog" xmlUrl="http://feeds.feedburner.com/blogspot/MKuf" rssowl:id="16067" />
+        <outline text="The Invisible Things Lab's blog" xmlUrl="feed://theinvisiblethings.blogspot.com/feeds/posts/default" rssowl:id="16068">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="18945" type="3" />
+        </outline>
+        <outline text="Blog - Stack Exchange" xmlUrl="feed://blog.stackoverflow.com/feed" rssowl:id="16069">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="19423" type="3" />
+        </outline>
+        <outline text="Digital Inspiration Technology Blog" xmlUrl="feed://feeds.feedburner.com/labnol?format=xml" rssowl:id="16070" />
+        <outline text="Google Earth Blog" xmlUrl="feed://feeds.feedburner.com/GoogleEarthBlog" rssowl:id="16071" />
+        <outline text="Hackaday" xmlUrl="feed://hackaday.com/feed" rssowl:id="16072" />
+        <outline text="How-To Geek" xmlUrl="feed://feeds.feedburner.com/HowToGeek" rssowl:id="16073">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="19306" type="3" />
+        </outline>
+        <outline text="Lifehack" xmlUrl="feed://feeds.lifehack.org/Lifehack" rssowl:id="16074" />
+        <outline text="Ogle Earth" xmlUrl="feed://feeds.ogleearth.com/ogleearth?format=xml" rssowl:id="16075">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="19744" type="3" />
+        </outline>
+        <outline text="persistent.info" xmlUrl="feed://feeds.feedburner.com/PersistentInfo" rssowl:id="16076">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="19217" type="3" />
+        </outline>
+        <outline text="Quick Online Tips" xmlUrl="feed://feeds.feedburner.com/QuickOnlineTips?format=xml" rssowl:id="16077">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="19768" type="3" />
+        </outline>
+        <outline text="SketchUp Buildings" xmlUrl="feed://feeds.feedburner.com/SketchupBuildings?format=xml" rssowl:id="16078">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="19795" type="3" />
+        </outline>
+        <outline text="Bad Astronomy" xmlUrl="feed://www.slate.com/blogs/bad_astronomy.fulltext.all.rss" rssowl:id="16079" />
+        <outline text="National Geographic" rssowl:isSet="false" rssowl:id="16080">
+          <outline text="National Geographic Adventure" xmlUrl="feed://www.nationalgeographic.com/adventure/nga.xml" rssowl:id="16081" />
+          <outline text="National Geographic News" xmlUrl="feed://feeds.nationalgeographic.com/ng/News/News_Main" rssowl:id="16082" />
+          <outline text="Field Notes" xmlUrl="feed://blog.nationalgeographicexpeditions.com/feed" rssowl:id="16083" />
+          <outline text="Intelligent Travel" xmlUrl="feed://intelligenttravel.nationalgeographic.com/feed" rssowl:id="16084" />
+          <outline text="Voices" xmlUrl="feed://voices.nationalgeographic.com/feed" rssowl:id="16085" />
+        </outline>
+        <outline text="NASA" rssowl:isSet="false" rssowl:id="16086">
+          <outline text="NASA Breaking News" xmlUrl="feed://www.nasa.gov/rss/dyn/breaking_news.rss" rssowl:id="16087" />
+          <outline text="NASA Earth News" xmlUrl="feed://www.nasa.gov/rss/dyn/earth.rss" rssowl:id="16088" />
+          <outline text="NASA Education News" xmlUrl="feed://www.nasa.gov/rss/dyn/educationnews.rss" rssowl:id="16089" />
+          <outline text="NASA Solar System Exploration News" xmlUrl="feed://www.nasa.gov/rss/dyn/solar_system.rss" rssowl:id="16090" />
+          <outline text="NASA Universe News" xmlUrl="feed://www.nasa.gov/rss/dyn/universe.rss" rssowl:id="16091" />
+        </outline>
       </outline>
-      <rssowl:savedsearch name="Unread News" matchAllConditions="true" rssowl:id="246">
+      <rssowl:savedsearch name="Unread News" matchAllConditions="true" rssowl:id="16092">
         <rssowl:searchcondition>
           <rssowl:searchspecifier id="0" />
           <rssowl:searchvalue type="7">
@@ -148,33 +201,343 @@
           <rssowl:searchfield id="14" entity="org.rssowl.core.persist.INews" />
         </rssowl:searchcondition>
       </rssowl:savedsearch>
-      <rssowl:savedsearch name="Todays News" matchAllConditions="true" rssowl:id="248">
+      <rssowl:savedsearch name="Todays News" matchAllConditions="true" rssowl:id="16094">
         <rssowl:searchcondition>
           <rssowl:searchspecifier id="9" />
           <rssowl:searchvalue type="4" value="1" />
           <rssowl:searchfield id="18" entity="org.rssowl.core.persist.INews" />
         </rssowl:searchcondition>
-        <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="11393" type="3" />
+        <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="32829" type="3" />
       </rssowl:savedsearch>
-      <rssowl:savedsearch name="Sticky News" matchAllConditions="true" rssowl:id="252">
-        <rssowl:searchcondition>
-          <rssowl:searchspecifier id="0" />
-          <rssowl:searchvalue type="6" value="true" />
-          <rssowl:searchfield id="13" entity="org.rssowl.core.persist.INews" />
-        </rssowl:searchcondition>
-      </rssowl:savedsearch>
-      <rssowl:savedsearch name="Labeled News" matchAllConditions="false" rssowl:id="254">
-        <rssowl:searchcondition>
-          <rssowl:searchspecifier id="0" />
-          <rssowl:searchvalue type="7" value="*" />
-          <rssowl:searchfield id="15" entity="org.rssowl.core.persist.INews" />
-        </rssowl:searchcondition>
-        <rssowl:pref id="org.rssowl.pref.BMNewsGrouping" value="7" type="1" />
-      </rssowl:savedsearch>
-      <outline text="Urban Terror News" xmlUrl="feed://www.urbanterror.info/rss/news/all" rssowl:id="11012">
-        <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="11013" type="3" />
+      <outline text="Misc" rssowl:isSet="false" rssowl:id="16096">
+        <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="19568" type="3" />
+        <outline text="Urban Terror News" xmlUrl="feed://www.urbanterror.info/rss/news/all" rssowl:id="16097">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="21055" type="3" />
+        </outline>
+        <outline text="Wikipedia  - Recent changes [en]" xmlUrl="feed://en.wikipedia.org/w/api.php?hidebots=1&amp;days=7&amp;limit=50&amp;hidewikidata=1&amp;action=feedrecentchanges&amp;feedformat=atom" rssowl:id="16098">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="34666" type="3" />
+        </outline>
+        <outline text="CommandlineFU" xmlUrl="feed://feeds2.feedburner.com/Command-line-fu" rssowl:id="16099">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="20874" type="3" />
+        </outline>
+        <outline text="Funny" rssowl:isSet="false" rssowl:id="16100">
+          <outline text="Jumbo Joke: Humor the Way You Like It" xmlUrl="feed://feeds.feedburner.com/jumbojoke" rssowl:id="16101">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="21114" type="3" />
+          </outline>
+          <outline text="The Oatmeal - Comics, Quizzes, &amp; Stories" xmlUrl="feed://feeds.feedburner.com/oatmealfeed?format=xml" rssowl:id="16102">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="21103" type="3" />
+          </outline>
+          <outline text="The Onion" xmlUrl="feed://feeds.theonion.com/theonion/daily" rssowl:id="16103">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="21408" type="3" />
+          </outline>
+          <outline text="xkcd.com" xmlUrl="feed://xkcd.com/rss.xml" rssowl:id="16104">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="17375" type="3" />
+          </outline>
+        </outline>
+        <outline text="Wikitravel" xmlUrl="feed://wikitravel.org/rss/english.rss" rssowl:id="16105" />
+        <outline text="W3streams.com" xmlUrl="feed://www.w3streams.com/news.xml" rssowl:id="16106">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="21394" type="3" />
+        </outline>
+        <outline text="Pollstar - Concerts" rssowl:isSet="false" rssowl:id="16107">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="19568" type="3" />
+          <outline text="Pollstar - SLC Concerts" xmlUrl="feed://www.pollstar.com/pollstarRSS.aspx?feed=city&amp;id=49863&amp;surrounding=True" rssowl:id="16108">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="21314" type="3" />
+          </outline>
+          <outline text="Primus" xmlUrl="feed://www.pollstar.com/pollstarRSS.aspx?feed=artist&amp;id=24033" rssowl:id="16109">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="21166" type="3" />
+          </outline>
+          <outline text="Thievery Corporation" xmlUrl="feed://www.pollstar.com/pollstarRSS.aspx?feed=artist&amp;id=7742" rssowl:id="16110">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="19568" type="3" />
+          </outline>
+          <outline text="Aphex Twin" xmlUrl="feed://www.pollstar.com/pollstarRSS.aspx?feed=artist&amp;id=79598" rssowl:id="16111">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="19568" type="3" />
+          </outline>
+          <outline text="Pretty Lights" xmlUrl="feed://www.pollstar.com/pollstarRSS.aspx?feed=artist&amp;id=175880" rssowl:id="16112" />
+        </outline>
+        <outline text="ThinkGeek - What's New" xmlUrl="http://feeds.feedburner.com/thinkgeek/whatsnew" rssowl:id="34533">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="34534" type="3" />
+        </outline>
+      </outline>
+      <outline text="The Daily WTF" xmlUrl="feed://syndication.thedailywtf.com/TheDailyWtf" rssowl:id="16113">
+        <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="41355" type="3" />
+      </outline>
+      <outline text="KSL / Home" xmlUrl="feed://www.ksl.com/xml/1070.rss" rssowl:id="16114">
+        <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="17314" type="3" />
+      </outline>
+      <outline text="Computing" rssowl:isSet="false" rssowl:id="16115">
+        <outline text="Apps / Plugins" rssowl:isSet="false" rssowl:id="16116">
+          <outline text="Firefox Featured Extensions" xmlUrl="http://addons.mozilla.org/en-US/firefox/extensions/format:rss?sort=featured" rssowl:id="16117">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="31575" type="3" />
+          </outline>
+          <outline text="Firefox Trending Extensions" xmlUrl="http://addons.mozilla.org/en-US/firefox/extensions/format:rss?sort=hotness" rssowl:id="16118">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="17579" type="3" />
+          </outline>
+          <outline text="PyPI Recent Updates" xmlUrl="http://pypi.python.org/pypi?:action=rss" rssowl:id="16119" />
+          <outline text="PyPI Newest Packages" xmlUrl="https://pypi.python.org/pypi?:action=packages_rss" rssowl:id="16120" />
+          <outline text="PEAR: Latest releases" xmlUrl="feed://pear.php.net/feeds/latest.rss" rssowl:id="16121" />
+          <outline text="PECL: Latest releases" xmlUrl="feed://pecl.php.net/feeds/latest.rss" rssowl:id="16122" />
+          <outline text="Popular  Software - AlternativeTo.net" xmlUrl="feed://feeds2.feedburner.com/alternativeto-popular-new-applications" rssowl:id="16123" />
+          <outline text="Recently added  Software - AlternativeTo.net" xmlUrl="feed://feeds2.feedburner.com/alternativeto-all-new-applications" rssowl:id="16124" />
+          <outline text="New Debian Packages" xmlUrl="https://packages.debian.org/unstable/main/newpkg?format=rss" rssowl:id="16125" />
+        </outline>
+        <outline text="Devel" rssowl:isSet="false" rssowl:id="16126">
+          <outline text="Releases / Announcements" rssowl:isSet="false" rssowl:id="16127">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="5986" type="3" />
+            <outline text="FreeBSD News Flash" xmlUrl="http://www.freebsd.org/news/rss.xml" rssowl:id="16128" />
+            <outline text="PHP News" xmlUrl="http://www.php.net/news.rss" rssowl:id="16129" />
+            <outline text="Python.org News" xmlUrl="feed://feeds.feedburner.com/PythonInsider?format=xml" rssowl:id="16130" />
+            <outline text="Apache Software Foundation Project Releases" xmlUrl="feed://projects.apache.org/feeds/rss.xml" rssowl:id="16131" />
+            <outline text="2600 - 2600: The Hacker Quarterly" xmlUrl="feed://www.2600.com/rss.xml" rssowl:id="16132" />
+            <outline text="Drupal Security advisories" xmlUrl="http://www.drupal.org/security/rss.xml" rssowl:id="16133" />
+          </outline>
+          <outline text="Project News" rssowl:isSet="false" rssowl:id="16134">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="50093" type="3" />
+            <outline text="Sencha Blog" xmlUrl="feed://feeds.feedburner.com/SenchaBlog?format=xml" rssowl:id="16135" />
+            <outline text="Nmap Announce" xmlUrl="feed://seclists.org/rss/nmap-announce.rss" rssowl:id="16136" />
+            <outline text="Linux.com - All Content" xmlUrl="feed://www.linux.com/feeds/all-content" rssowl:id="16137" />
+            <outline text="jQuery Blog" xmlUrl="http://jquery.com/blog/feed/" rssowl:id="16138" />
+            <outline text="The GitHub Blog" xmlUrl="http://github.com/blog/all.atom" rssowl:id="16139" />
+            <outline text="The npm Blog" xmlUrl="feed://blog.npmjs.org/rss" rssowl:id="16140" />
+            <outline text="The Mozilla Blog" xmlUrl="http://blog.mozilla.org/feed/" rssowl:id="16141" />
+            <outline text="Drupal.org" xmlUrl="http://www.drupal.org/node/feed" rssowl:id="16142" />
+            <outline text="PEAR Blog" xmlUrl="feed://blog.pear.php.net/feed" rssowl:id="16143" />
+            <outline text="KUbuntu News" xmlUrl="feed://www.kubuntu.org/news/rss-feed" rssowl:id="16144" />
+            <outline text="Metasploit" xmlUrl="https://community.rapid7.com/community/metasploit/blog/feeds/posts" rssowl:id="16145" />
+          </outline>
+          <outline text="Blogs / General" rssowl:isSet="false" rssowl:id="16146">
+            <outline text="CodeBetter.Com" xmlUrl="http://codebetter.com/blogs/MainFeed.aspx" rssowl:id="16147" />
+            <outline text="Coding Horror" xmlUrl="http://www.codinghorror.com/blog/index.xml" rssowl:id="16148" />
+            <outline text="dzone.com" xmlUrl="http://www.dzone.com/feed/frontpage/rss.xml" rssowl:id="16149" />
+            <outline text="JavaScript Tips" xmlUrl="http://www.webreference.com/js/tips/channels/last1515.rdf" rssowl:id="16150" />
+            <outline text="Joel on Software" xmlUrl="http://www.joelonsoftware.com/rss.xml" rssowl:id="16151" />
+            <outline text="MAKE blog" xmlUrl="feed://feeds.feedburner.com/makezineonline?format=xml" rssowl:id="16152" />
+            <outline text="PHPBuilder.com" xmlUrl="http://phpbuilder.com/rss_feed.php?type=articles&amp;limit=20" rssowl:id="16153" />
+            <outline text="programming" xmlUrl="http://programming.reddit.com/.rss" rssowl:id="16154" />
+            <outline text="QuirksBlog" xmlUrl="http://www.quirksmode.org/blog/atom.xml" rssowl:id="16155" />
+            <outline text="Servlets.com" xmlUrl="http://www.servlets.com/blog/index.rss" rssowl:id="16156" />
+          </outline>
+        </outline>
+        <outline text="Internet" rssowl:isSet="false" rssowl:id="16157">
+          <outline text="456 Berea Street" xmlUrl="http://www.456bereastreet.com/feed.xml" rssowl:id="16158" />
+          <outline text="CSS Beauty News Feed" xmlUrl="http://www.cssbeauty.com/rss/news/" rssowl:id="16159" />
+          <outline text="ReadWriteWeb" xmlUrl="http://www.readwriteweb.com/rss.xml" rssowl:id="16160">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="403" type="3" />
+          </outline>
+          <outline text="SimpleBits" xmlUrl="http://www.simplebits.com/xml/rss.xml" rssowl:id="16161" />
+          <outline text="Softpedia - Webmaster" xmlUrl="http://news.softpedia.com/newsRSS/Webmaster-4.xml" rssowl:id="16162" />
+          <outline text="WebReference News" xmlUrl="http://www.webreference.com/webreference.rdf" rssowl:id="16163" />
+          <outline text="Webware.com" xmlUrl="http://www.webware.com/8300-1_109-2-0.xml" rssowl:id="16165" />
+          <outline text="WebDeveloper.com" xmlUrl="feed://www.webdeveloper.com/forum/external.php?type=RSS2" rssowl:id="16166" />
+          <outline text="The FreeBSD Diary" xmlUrl="feed://www.freebsddiary.org/news.php" rssowl:id="16167" />
+          <outline text="AlternativeTo Blog" xmlUrl="feed://feeds2.feedburner.com/alternativeto-blog" rssowl:id="16168" />
+          <outline text="MakeUseOf" xmlUrl="feed://feeds.feedburner.com/makeuseof" rssowl:id="16169" />
+        </outline>
+        <outline text="Security" rssowl:isSet="false" rssowl:id="16170">
+          <outline text="News" rssowl:isSet="false" rssowl:id="16171">
+            <outline text="Darknet - The Darkside" xmlUrl="http://feeds.feedburner.com/darknethackers" rssowl:id="16172" />
+            <outline text="F-Secure Antivirus Research Weblog" xmlUrl="http://www.f-secure.com/weblog/weblog.rdf" rssowl:id="16173" />
+            <outline text="ha.ckers.org web application security lab" xmlUrl="http://ha.ckers.org/blog/feed/" rssowl:id="16174" />
+            <outline text="Schneier on Security" xmlUrl="http://www.schneier.com/blog/index.rdf" rssowl:id="16175" />
+            <outline text="TaoSecurity" xmlUrl="http://taosecurity.blogspot.com/atom.xml" rssowl:id="16176" />
+            <outline text="News ≈ Packet Storm" xmlUrl="feed://rss.packetstormsecurity.com/news" rssowl:id="16177" />
+            <outline text="OSVDB News" xmlUrl="feed://blog.osvdb.org/feed" rssowl:id="16178" />
+            <outline text="Penetration Testing" xmlUrl="feed://seclists.org/rss/pen-test.rss" rssowl:id="16179" />
+            <outline text="Security Basics" xmlUrl="feed://seclists.org/rss/basics.rss" rssowl:id="16180" />
+            <outline text="Interesting People" xmlUrl="feed://seclists.org/rss/interesting-people.rss" rssowl:id="16181" />
+            <outline text="The RISKS Forum" xmlUrl="feed://seclists.org/rss/risks.rss" rssowl:id="16182">
+              <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="18801" type="3" />
+            </outline>
+            <outline text="Data Loss" xmlUrl="feed://seclists.org/rss/dataloss.rss" rssowl:id="16183" />
+            <outline text="Info Security News" xmlUrl="feed://seclists.org/rss/isn.rss" rssowl:id="16184" />
+          </outline>
+          <outline text="Exploits / Files / Announcements" rssowl:isSet="false" rssowl:id="16185">
+            <outline text="Files ≈ Packet Storm" xmlUrl="feed://rss.packetstormsecurity.com/files" rssowl:id="16186">
+              <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="16335" type="3" />
+            </outline>
+            <outline text="Packet Storm" xmlUrl="feed://rss.packetstormsecurity.com" rssowl:id="16187" />
+            <outline text="SecurityFocus Vulnerabilities" xmlUrl="feed://www.securityfocus.com/rss/vulnerabilities.xml" rssowl:id="16188" />
+            <outline text="US-CERT Alerts" xmlUrl="feed://www.us-cert.gov/ncas/alerts.xml" rssowl:id="16189" />
+            <outline text="National Vulnerability Database" xmlUrl="feed://nvd.nist.gov/download/nvd-rss.xml" rssowl:id="16190" />
+            <outline text="FreeBSD Security Advisories" xmlUrl="http://www.freebsd.org/security/rss.xml" rssowl:id="16191" />
+            <outline text="Debian Security" xmlUrl="http://www.debian.org/security/dsa-long" rssowl:id="16192" />
+          </outline>
+          <outline text="Sec Mailing list / Infosec" rssowl:isSet="false" rssowl:id="16193">
+            <outline text="Bugtraq" xmlUrl="feed://seclists.org/rss/bugtraq.rss" rssowl:id="16194" />
+            <outline text="Full Disclosure" xmlUrl="feed://seclists.org/rss/fulldisclosure.rss" rssowl:id="16195" />
+            <outline text="Funsec" xmlUrl="feed://seclists.org/rss/funsec.rss" rssowl:id="16196" />
+            <outline text="NANOG" xmlUrl="feed://seclists.org/rss/nanog.rss" rssowl:id="16197" />
+            <outline text="Daily Dave" xmlUrl="feed://seclists.org/rss/dailydave.rss" rssowl:id="16198" />
+            <outline text="Web App Security" xmlUrl="feed://seclists.org/rss/webappsec.rss" rssowl:id="16199" />
+          </outline>
+        </outline>
+        <outline text="Tech News" rssowl:isSet="false" rssowl:id="16200">
+          <outline text="BBC News | Technology | World Edition" xmlUrl="http://news.bbc.co.uk/rss/newsonline_world_edition/technology/rss091.xml" rssowl:id="16201" />
+          <outline text="Anand Tech" xmlUrl="http://www.anandtech.com/rss/articlefeed.aspx" rssowl:id="16202" />
+          <outline text="Ars Technica" xmlUrl="http://arstechnica.com/index.ars/rss" rssowl:id="16203" />
+          <outline text="digg - tech news" xmlUrl="http://digg.com/rss/index.xml" rssowl:id="16204" />
+          <outline text="Engadget" xmlUrl="http://www.engadget.com/rss.xml" rssowl:id="16205">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="8614" type="3" />
+          </outline>
+          <outline text="eWEEK Technology News" xmlUrl="http://rssnewsapps.ziffdavis.com/tech.xml" rssowl:id="16206" />
+          <outline text="this WEEK in TECH" xmlUrl="http://leoville.tv/podcasts/twit.xml" rssowl:id="16207">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="754" type="3" />
+          </outline>
+          <outline text="Gizmodo" xmlUrl="http://www.gizmodo.com/index.xml" rssowl:id="16208" />
+          <outline text="IRC-Junkie.org - IRC News" xmlUrl="http://www.irc-junkie.org/feed/" rssowl:id="16209" />
+          <outline text="Planet Eclipse" xmlUrl="http://www.planeteclipse.org/planet/atom.xml" rssowl:id="16210" />
+          <outline text="Shacknews" xmlUrl="http://www.shacknews.com/rss?recent_articles=1" rssowl:id="16211" />
+          <outline text="Softpedia News" xmlUrl="http://news.softpedia.com/newsRSS/Global-0.xml" rssowl:id="16212" />
+        </outline>
+        <outline text="github" rssowl:isSet="false" rssowl:id="16213">
+          <outline text="Github Gists - Recent public Gists" xmlUrl="http://gist.github.com/discover.atom" rssowl:id="16214">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="62081" type="3" />
+          </outline>
+          <outline text="GitHub Trending - All - Montly" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=&amp;timespan=monthly" rssowl:id="16215" />
+          <outline text="GitHub Trending - All - Weekly" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=&amp;timespan=weekly" rssowl:id="16216" />
+          <outline text="GitHub Trending - All - Daily" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=&amp;timespan=daily" rssowl:id="16217" />
+          <outline text="GitHub Trending - Game Maker Language - Montly" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=game-maker-language&amp;timespan=monthly" rssowl:id="16218" />
+          <outline text="GitHub Trending - Python - Daily" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=python&amp;timespan=daily" rssowl:id="16219" />
+          <outline text="GitHub Trending - Arduino - Daily" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=arduino&amp;timespan=daily" rssowl:id="16220" />
+          <outline text="GitHub Trending - Arduino - Montly" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=arduino&amp;timespan=monthly" rssowl:id="16221" />
+          <outline text="GitHub Trending - Arduino - Weekly" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=arduino&amp;timespan=weekly" rssowl:id="16222" />
+          <outline text="GitHub Trending - AutoHotkey - Daily" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=autohotkey&amp;timespan=daily" rssowl:id="16223" />
+          <outline text="GitHub Trending - AutoHotkey - Montly" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=autohotkey&amp;timespan=monthly" rssowl:id="16224" />
+          <outline text="GitHub Trending - AutoHotkey - Weekly" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=autohotkey&amp;timespan=weekly" rssowl:id="16225" />
+          <outline text="GitHub Trending - JavaScript - Daily" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=javascript&amp;timespan=daily" rssowl:id="16226" />
+          <outline text="GitHub Trending - JavaScript - Montly" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=javascript&amp;timespan=monthly" rssowl:id="16227" />
+          <outline text="GitHub Trending - JavaScript - Weekly" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=javascript&amp;timespan=weekly" rssowl:id="16228" />
+          <outline text="GitHub Trending - PHP - Daily" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=php&amp;timespan=daily" rssowl:id="16229" />
+          <outline text="GitHub Trending - PHP - Montly" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=php&amp;timespan=monthly" rssowl:id="16230" />
+          <outline text="GitHub Trending - PHP - Weekly" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=php&amp;timespan=weekly" rssowl:id="16231" />
+          <outline text="GitHub Trending - Python - Montly" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=python&amp;timespan=monthly" rssowl:id="16232" />
+          <outline text="GitHub Trending - Python - Weekly" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=python&amp;timespan=weekly" rssowl:id="16233" />
+          <outline text="GitHub Trending - Python - Weekly" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=python&amp;timespan=weekly" rssowl:id="16234" />
+          <outline text="GitHub Trending - Shell - Daily" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=bash&amp;timespan=daily" rssowl:id="16235" />
+          <outline text="GitHub Trending - Shell - Montly" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=bash&amp;timespan=monthly" rssowl:id="16236" />
+          <outline text="GitHub Trending - Shell - Weekly" xmlUrl="feed://ghtrendingrss.appspot.com/rss?language=bash&amp;timespan=weekly" rssowl:id="16237" />
+        </outline>
+      </outline>
+      <outline text="Youtube" rssowl:isSet="false" rssowl:id="16238">
+        <outline text="Uploads by TranceHouseSociety89" xmlUrl="feed://gdata.youtube.com/feeds/base/users/TranceHouseSociety89/uploads?alt=rss&amp;v=2&amp;orderby=published&amp;client=ytapi-youtube-profile" rssowl:id="16239" />
+      </outline>
+      <outline text="Forums / Classifieds " rssowl:isSet="false" rssowl:id="16240">
+        <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="29913" type="3" />
+        <outline text="Craigslist" rssowl:isSet="false" rssowl:id="16241">
+          <outline text="SLC rants and raves" xmlUrl="feed://saltlakecity.craigslist.org/search/rnr?format=rss" rssowl:id="16242" />
+          <outline text="SLC computer gigs" xmlUrl="feed://saltlakecity.craigslist.org/search/cpg?format=rss" rssowl:id="16243" />
+          <outline text="SLC free stuff" xmlUrl="feed://saltlakecity.craigslist.org/search/zip?format=rss" rssowl:id="16244" />
+          <outline text="SLC community" xmlUrl="feed://saltlakecity.craigslist.org/search/ccc?format=rss" rssowl:id="16245" />
+        </outline>
+        <outline text="Urbanterror" rssowl:isSet="false" rssowl:id="16246">
+          <outline text="Urban Terror Forums" xmlUrl="feed://www.urbanterror.info/forums/rss/forums/1-urban-terror-forums" rssowl:id="16247">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="45442" type="3" />
+          </outline>
+          <outline text="Github - Urbanterror" xmlUrl="https://github.com/FrozenSand/UrbanTerror42/commits/master.atom" rssowl:id="16248" />
+          <outline text="Urban Terror Blogs" xmlUrl="feed://www.urbanterror.info/rss/blogs/all" rssowl:id="16249">
+            <rssowl:pref id="org.rssowl.ui.internal.LoadErrorKey" value="Invalid or Malformed Feed" type="5" />
+          </outline>
+        </outline>
+        <outline text="StackOverflow" rssowl:isSet="false" rssowl:id="16250">
+          <outline text="Recent Questions - Stack Overflow" xmlUrl="feed://stackoverflow.com/feeds" rssowl:id="16251" />
+          <outline text="javascript - Stack Overflow" xmlUrl="feed://stackoverflow.com/feeds/tag?tagnames=javascript&amp;sort=newest" rssowl:id="16252" />
+          <outline text="extjs - Stack Overflow" xmlUrl="feed://stackoverflow.com/feeds/tag?tagnames=extjs&amp;sort=newest" rssowl:id="16253" />
+          <outline text="extjs4 - Stack Overflow" xmlUrl="feed://stackoverflow.com/feeds/tag?tagnames=extjs4&amp;sort=newest" rssowl:id="16254" />
+          <outline text="jquery - Stack Overflow" xmlUrl="feed://stackoverflow.com/feeds/tag?tagnames=jquery&amp;sort=newest" rssowl:id="16255" />
+          <outline text="linux - Stack Overflow" xmlUrl="feed://stackoverflow.com/feeds/tag?tagnames=linux&amp;sort=newest" rssowl:id="16256" />
+          <outline text="mysql - Stack Overflow" xmlUrl="feed://stackoverflow.com/feeds/tag?tagnames=mysql&amp;sort=newest" rssowl:id="16257" />
+          <outline text="php - Stack Overflow" xmlUrl="feed://stackoverflow.com/feeds/tag?tagnames=php&amp;sort=newest" rssowl:id="16258" />
+          <outline text="python - Stack Overflow" xmlUrl="feed://stackoverflow.com/feeds/tag?tagnames=python&amp;sort=newest" rssowl:id="16259" />
+        </outline>
+        <outline text="ServerFault" rssowl:isSet="false" rssowl:id="16260">
+          <outline text="Recent Questions - Server Fault" xmlUrl="feed://serverfault.com/feeds" rssowl:id="16261" />
+          <outline text="mysql - Server Fault" xmlUrl="feed://serverfault.com/feeds/tag?tagnames=mysql&amp;sort=newest" rssowl:id="16262" />
+          <outline text="apache-2.2 - Server Fault" xmlUrl="feed://serverfault.com/feeds/tag?tagnames=apache-2.2&amp;sort=newest" rssowl:id="16263" />
+          <outline text="bash - Server Fault" xmlUrl="feed://serverfault.com/feeds/tag?tagnames=bash&amp;sort=newest" rssowl:id="16264" />
+          <outline text="dns - Server Fault" xmlUrl="feed://serverfault.com/feeds/tag?tagnames=dns&amp;sort=newest" rssowl:id="16265" />
+          <outline text="iptables - Server Fault" xmlUrl="feed://serverfault.com/feeds/tag?tagnames=iptables&amp;sort=newest" rssowl:id="16266" />
+          <outline text="linux - Server Fault" xmlUrl="feed://serverfault.com/feeds/tag?tagnames=linux&amp;sort=newest" rssowl:id="16267" />
+          <outline text="php - Server Fault" xmlUrl="feed://serverfault.com/feeds/tag?tagnames=php&amp;sort=newest" rssowl:id="16268" />
+          <outline text="security - Server Fault" xmlUrl="feed://serverfault.com/feeds/tag?tagnames=security&amp;sort=newest" rssowl:id="16269" />
+        </outline>
+        <outline text="StackExchange" rssowl:isSet="false" rssowl:id="16270">
+          <outline text="Hot Questions - Stack Exchange" xmlUrl="feed://stackexchange.com/feeds/questions" rssowl:id="16271" />
+          <outline text="Chess Stack Exchange" xmlUrl="feed://chess.stackexchange.com/feeds" rssowl:id="16272" />
+          <outline text="History Stack Exchange" xmlUrl="feed://history.stackexchange.com/feeds" rssowl:id="16273" />
+          <outline text="Bicycles Stack Exchange" xmlUrl="feed://bicycles.stackexchange.com/feeds" rssowl:id="16274" />
+          <outline text="marijuana - Skeptics Stack Exchange" xmlUrl="feed://skeptics.stackexchange.com/feeds/tag?tagnames=marijuana&amp;sort=newest" rssowl:id="16275" />
+          <outline text="Astronomy Stack Exchange" xmlUrl="feed://astronomy.stackexchange.com/feeds" rssowl:id="16276" />
+          <outline text="Bitcoin Stack Exchange" xmlUrl="feed://bitcoin.stackexchange.com/feeds" rssowl:id="16277" />
+          <outline text="Board &amp; Card Games Stack Exchange" xmlUrl="feed://boardgames.stackexchange.com/feeds" rssowl:id="16278" />
+          <outline text="Ebooks Stack Exchange" xmlUrl="feed://ebooks.stackexchange.com/feeds" rssowl:id="16279" />
+          <outline text="Freelancing Stack Exchange" xmlUrl="feed://freelancing.stackexchange.com/feeds" rssowl:id="16280" />
+          <outline text="Martial Arts Stack Exchange" xmlUrl="feed://martialarts.stackexchange.com/feeds" rssowl:id="16281" />
+          <outline text="Movies &amp; TV Stack Exchange" xmlUrl="feed://movies.stackexchange.com/feeds" rssowl:id="16282" />
+          <outline text="Music: Practice &amp; Theory Stack Exchange" xmlUrl="feed://music.stackexchange.com/feeds" rssowl:id="16283" />
+          <outline text="Personal Finance &amp; Money Stack Exchange" xmlUrl="feed://money.stackexchange.com/feeds" rssowl:id="16284" />
+          <outline text="Personal Productivity Stack Exchange" xmlUrl="feed://productivity.stackexchange.com/feeds" rssowl:id="16285" />
+          <outline text="Photography Stack Exchange" xmlUrl="feed://photo.stackexchange.com/feeds" rssowl:id="16286" />
+          <outline text="Project Management Stack Exchange" xmlUrl="feed://pm.stackexchange.com/feeds" rssowl:id="16287" />
+          <outline text="Skeptics Stack Exchange" xmlUrl="feed://skeptics.stackexchange.com/feeds" rssowl:id="16288" />
+          <outline text="Space Exploration Stack Exchange" xmlUrl="feed://space.stackexchange.com/feeds" rssowl:id="16289" />
+          <outline text="Startups Stack Exchange" xmlUrl="feed://startups.stackexchange.com/feeds" rssowl:id="16290" />
+          <outline text="The Workplace Stack Exchange" xmlUrl="feed://workplace.stackexchange.com/feeds" rssowl:id="16291" />
+          <outline text="Travel Stack Exchange" xmlUrl="feed://travel.stackexchange.com/feeds" rssowl:id="16292" />
+          <outline text="Computer-ish StackExhanges" rssowl:isSet="false" rssowl:id="16293">
+            <outline text="Computer Science Stack Exchange" xmlUrl="feed://cs.stackexchange.com/feeds" rssowl:id="16294" />
+            <outline text="Database Administrators Stack Exchange" xmlUrl="feed://dba.stackexchange.com/feeds" rssowl:id="16295" />
+            <outline text="Reverse Engineering Stack Exchange" xmlUrl="feed://reverseengineering.stackexchange.com/feeds" rssowl:id="16296" />
+            <outline text="Software Recommendations Stack Exchange" xmlUrl="feed://softwarerecs.stackexchange.com/feeds" rssowl:id="16297" />
+            <outline text="Theoretical Computer Science Stack Exchange" xmlUrl="feed://cstheory.stackexchange.com/feeds" rssowl:id="16298" />
+            <outline text="User Experience Stack Exchange" xmlUrl="feed://ux.stackexchange.com/feeds" rssowl:id="16299" />
+            <outline text="Web Applications Stack Exchange" xmlUrl="feed://webapps.stackexchange.com/feeds" rssowl:id="16300" />
+            <outline text="Webmasters Stack Exchange" xmlUrl="feed://webmasters.stackexchange.com/feeds" rssowl:id="16301" />
+          </outline>
+        </outline>
+        <outline text="Sencha / ExtJS" rssowl:isSet="false" rssowl:id="16302">
+          <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="29913" type="3" />
+          <outline text="Sencha Forum - Community Discussion" xmlUrl="feed://www.sencha.com/forum/external.php?type=RSS2&amp;forumids=68" rssowl:id="16303">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="29913" type="3" />
+          </outline>
+          <outline text="Sencha Forum" xmlUrl="feed://www.sencha.com/forum/external.php?type=RSS2" rssowl:id="16304">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="29913" type="3" />
+          </outline>
+          <outline text="Sencha Forum - Ext 3.x: User Extensions and Plugins" xmlUrl="feed://www.sencha.com/forum/external.php?type=RSS2&amp;forumids=42" rssowl:id="16305">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="29913" type="3" />
+          </outline>
+          <outline text="Sencha Forum - Ext 3.x: Bugs" xmlUrl="feed://www.sencha.com/forum/external.php?type=RSS2&amp;forumids=41" rssowl:id="16306">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="29913" type="3" />
+          </outline>
+          <outline text="Sencha Forum - Ext 3.x: Help &amp; Discussion" xmlUrl="feed://www.sencha.com/forum/external.php?type=RSS2&amp;forumids=40" rssowl:id="16307">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="29913" type="3" />
+          </outline>
+          <outline text="Sencha Forum - Ext.Direct" xmlUrl="feed://www.sencha.com/forum/external.php?type=RSS2&amp;forumids=47" rssowl:id="16308">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="29913" type="3" />
+          </outline>
+          <outline text="Sencha Forum - Ext:Bugs" xmlUrl="feed://www.sencha.com/forum/external.php?type=RSS2&amp;forumids=80" rssowl:id="16309">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="29913" type="3" />
+          </outline>
+          <outline text="Sencha Forum - Ext: Discussion" xmlUrl="feed://www.sencha.com/forum/external.php?type=RSS2&amp;forumids=81" rssowl:id="16310">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="29913" type="3" />
+          </outline>
+          <outline text="Sencha Forum - Ext: Q&amp;A" xmlUrl="feed://www.sencha.com/forum/external.php?type=RSS2&amp;forumids=87" rssowl:id="16311">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="29913" type="3" />
+          </outline>
+          <outline text="Sencha Forum - Ext 5: Bugs" xmlUrl="feed://www.sencha.com/forum/external.php?type=RSS2&amp;forumids=130" rssowl:id="16312">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="29913" type="3" />
+          </outline>
+          <outline text="Sencha Forum - Ext 5: Q&amp;A" xmlUrl="feed://www.sencha.com/forum/external.php?type=RSS2&amp;forumids=129" rssowl:id="16313">
+            <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="29913" type="3" />
+          </outline>
+        </outline>
+      </outline>
+      <outline text="SoylentNews" xmlUrl="feed://soylentnews.org/index.atom" rssowl:id="16314">
+        <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="16517" type="3" />
+      </outline>
+      <outline text="Hacker News" xmlUrl="http://news.ycombinator.com/rss" rssowl:id="16164">
+        <rssowl:pref id="org.rssowl.pref.NMSelectedNews" value="23436" type="3" />
       </outline>
     </outline>
+    <outline text="Security" rssowl:isSet="true" rssowl:id="123" />
     <rssowl:label id="2" name="Work" order="1" color="200,118,10" />
     <rssowl:label id="1" name="Important" order="0" color="163,21,2" />
     <rssowl:label id="4" name="To Do" order="3" color="92,101,126" />
@@ -279,6 +642,7 @@
     <rssowl:pref id="org.rssowl.pref.OpenBrowserInBackground" value="false" type="0" kind="0" />
     <rssowl:pref id="org.rssowl.pref.ShareProviderState" value="-3,-5,-1,-6,-7,-24,-8,-19,-9,-10,-12,-13,-4,-14,-15,-16,-17,-11,-18,-20,-21,-2,-22,-23,-25,-26,-27,-28,-29" type="2" kind="0" />
     <rssowl:pref id="org.rssowl.pref.HideCompletedDownloads" value="false" type="0" kind="0" />
+    <rssowl:pref id="org.rssowl.pref.ImportResources" value="C:\Documents and Settings\erikp\Desktop\rssowl.opml" type="6" kind="0" />
     <rssowl:pref id="org.rssowl.pref.ToolbarItems" value="2,0,5,6,0,7,8,0,10,0,11,12,0,39,0,13,14,0,20,0,15,16" type="2" kind="0" />
     <rssowl:pref id="org.rssowl.pref.ToolbarMode" value="0" type="1" kind="0" />
     <rssowl:pref id="org.rssowl.pref.DefaultNextAction" value="1" type="1" kind="0" />
