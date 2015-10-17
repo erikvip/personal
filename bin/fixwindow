@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# move a window onto the screen (hopefully)
+#xdotool search --name $1 windowmove 300 300
+for x in $(xdotool search --name $1);
+do
+	xdotool windowmove $x 300 300
+done

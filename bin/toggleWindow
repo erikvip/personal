@@ -1,0 +1,36 @@
+#!/bin/bash
+# Toggle a window's focus and min/maximize state
+# Specify a keyword to search for window's name, and a command line to execute to start initially
+# toggleWindow <window keyword> <full path to executable>
+#
+# This is ment to be used in conjuntion with xbindkeys, e.g.:
+# "/home/user/bin/toggleWindow sublime_text /home/erik/bin/sublime"
+#  F4
+# "/home/user/bin/toggleWindow konsole /usr/bin/konsole"
+#  F2
+#
+# The above will open/hide Sublime text with F4 key, and konsole with F2
+
+WINCLASS=$1
+CMD=$2
+
+WIN=$(xdotool search --classname $WINCLASS | tail -1)
+ACTIVEWIN=$(xdotool getactivewindow)
+
+#echo $WIN
+if [ -z $WIN ]; then
+	#echo "Not running"
+	`$CMD &`
+else
+	if [ $WIN == $ACTIVEWIN ]; then
+		#echo "Window is active"
+#		xdotool windowunmap $WIN
+		xdotool windowminimize $WIN
+	else
+		echo "Window is inactive"	
+		xdotool windowmap $WIN
+		xdotool windowactivate $WIN
+
+	fi
+fi
+

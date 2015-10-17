@@ -1,0 +1,3 @@
+#!/bin/bash
+# Just a shortcut for running 'sublime <file|dir>' to open in sublime
+/opt/Sublime\ Text\ 2/sublime_text $* &

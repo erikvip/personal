@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Rerun the last command in konsole, then switch back to 'current' window
+# E.g.: I bind this to a hotkey in xbindrc (Ctrl+1), then open a konsole window and 
+# run your build/test/whatever command.  Switch back to your editor, make changes, and now
+# you can simply hit Ctrl+1(or whatever you setup) to run your last command without manually switching windows
+
+XDCURRENT=$(xdotool getactivewindow);
+
+sleep 0.1
+xdotool search --onlyvisible -name konsole windowfocus --sync 
+xdotool type --delay 20 'fc -s'
+xdotool key --delay 20 Return
+
+xdotool windowfocus $XDCURRENT
+

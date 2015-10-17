@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Colorized grep with less pipe
+
+grep --color=always $* | less -R
