@@ -1,0 +1,10 @@
+# Turn on mouse support
+set mouse
+
+
+# Good sources for nano syntax highlighters:
+# https://github.com/scopatz/nanorc
+# https://github.com/serialhex/nano-highlight
+
+# Custom syntax highlighters and stuff
+include "~/.nano/*.nanorc"
