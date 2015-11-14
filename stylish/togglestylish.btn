@@ -1,0 +1,17 @@
+{
+  "prefbar:info": {
+    "formatversion": 3
+  },
+  "prefbar:menu:enabled": {
+    "items": [
+      "prefbar:button:stylish"
+    ]
+  },
+  "prefbar:button:stylish": {
+    "type": "check",
+    "label": "Stylish",
+    "prefstring":"extensions.stylish.styleRegistrationEnabled",
+    "topref":"Boolean(value)", 
+    "frompref":"Boolean(value)"
+  }
+} 
