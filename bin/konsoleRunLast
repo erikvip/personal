@@ -1,16 +1,158 @@
-#!/bin/bash
+#!/bin/bash 
+################################################################################
+# Rerun the last command in terminal ($1), then switch back to 'current' window.
+# E.g.: I bind this to a hotkey in xbindrc (Ctrl+1), then open a terminal window 
+# and run your build/test/whatever command. Switch back to your editor, make 
+# changes, and now you can simply hit Ctrl+1(or whatever you setup) to run your 
+# last command without manually switching windows.
+#
+# Kind of like a poor man's "Build Script" who's IDE is lacking. 
+#
+# First paramter must be the shell executable to use.
+#
+# We need Zenity and Recode now, only for our special popups...and man this thing 
+# has become a mess...With all this zenity & recode crap.  But, it's hard to see 
+# errors when they happen on an non-interactive terminal...so Zenity deals with 
+# that issue. Maybe we can make a wrapper for shit like this...cuz this is ugly
+# 
+# Install:
+#
+# Normally I pair this up with an .xbindkeyssrc script as follows:
+#
+# ~/.xbindkeysrc
+# 	"~/bin/konsoleRunLast xfce4-terminal"
+#	Control+Shift+1
+#
+# So the script gets run on Ctrl+Shift+f1.  Probably many ways to do this...but
+# this is my method.
+#
+# @author Erik Phillips <erikvip@gmai.com>
+#
+################################################################################
 
-# Rerun the last command in konsole, then switch back to 'current' window
-# E.g.: I bind this to a hotkey in xbindrc (Ctrl+1), then open a konsole window and 
-# run your build/test/whatever command.  Switch back to your editor, make changes, and now
-# you can simply hit Ctrl+1(or whatever you setup) to run your last command without manually switching windows
+# Shell "Class" to bring to front
+MYSHELLPREF=$1
 
+# Check for Zenity and Recode...bah, this is just for error reporting
+OKZENITY=$(which zenity)
+OKRECODE=$(which recode)
+
+# Check to make sure our shell exists as a executable
+OKMYSHELL=$(which "$MYSHELLPREF")
+
+# Find out if we're interactive terminal or not...interactive terminals should only be for debugging
+# So kind of pointless to do all these checks I guess...but whatever, here we go!
+if [[ $(tty) -eq 'not a tty' ]]; then
+	bold=$(tput bold)
+	normal=$(tput sgr0)
+	MYINTERACTIVE="true"
+else
+	bold="<b>"
+	normal="</b>"
+	MYINTERACTIVE="false"
+fi
+
+####
+# Send a message, using the shell (interactive) or zenity to X11 (non-interactive)
+# Note that since the X11 Zenity command supports Pango syntax, you can use things like <b> <i> and
+# HTML kinda stuff...but those won't work right on the shell. So be careful
+#
+# @param $1 The message title
+# @param $2- The message to send. May use the ${bold} and ${normal} entities we assigned before
+# @return void
+###
+message() {
+	if [[ $1 == 'info' ]]; then
+		MSGTYPE='--info';
+		shift
+	elif [[ $1 == 'warning' ]]; then
+		MSGTYPE='--warning'
+		shift
+	else
+		MSGTYPE='--error'
+	fi
+
+	TITLE=$1
+	shift
+	if [[ $MYINTERACTIVE == "true" ]]; then
+		if [[ ! $OKRECODE ]]; then
+			printf "${bold}$TITLE${normal} $*"
+		else 
+			printf "${bold}$TITLE${normal} $*" | recode HTML_4.0;	
+		fi
+	else
+		zenity "${MSGTYPE}" --title "${TITLE}" --text "${*}"
+	fi	
+}
+
+###
+# Print a message and then exit status 1
+# @param $* The message to send.  This gets passed right to message, then we exit
+###
+error() {
+	message "$1" "$2" "${3-}"
+	exit 1
+}
+
+# Verify zenity is installed, and attempt to install it if not
+if [[ ! $OKZENITY ]]; then
+	ERRORMSG="No zenity installed, required for our fancy X popup messages!\n"
+	ERRORMSG+="Attempting to install via ${bold}apt-get install -y zenity${normal}. This will only work if NOPASSWD is set in sudoers.\n"
+	ERRORMSG+="If this fails, run: ${bold}sudo apt-get install -y zenity${normal} yourself.\n\n"
+	message "Could not locate Zenity" "$ERRORMSG"
+	sleep 2
+
+	sudo apt-get -y install zenity || error "Zenity installation failed" "Please manually install zenity and try again"
+fi
+
+# Verify recode is installed, and attempt to install it if not. 
+# Recode kind of sucks...we just use it to cross convert between &gt; &lt; html-entities, which is
+# what zenity requires. Kind of pointless, since this script will almost *always* be ran from inside
+# X11...but I'm being through, damnit!
+if [[ ! $OKRECODE ]]; then
+	ERRORMSG="No recode installed.  We need this for our fancy messages!\n\n";
+	ERRORMSG+="Attempting to install via: ${bold}sudo apt-get -y install recode${normal}\n\n";
+	ERRORMSG+="If this fails, try to install yourself via: ${bold}sudo apt-get -y install recode${normal}\n\n";
+	message "Could not locate recode" "$ERRORMSG"
+	sleep 2
+
+	sudo apt-get -y install recode && message info "Recode installed successfuly." "Recode has been installed successfully" \
+		|| error "Recode installation failed" "Please manually install recode and try again"
+fi
+
+# Finally, now that deps have been verified.  Make sure our passed argument ($1) is for a valid shell
+# Hmmm...we should also do an xdotool here and make sure we can find the damn thing too...yea...
+# that would have helped a lot when I was pulling my hair out a second ago, doh!
+if [[ -z "$MYSHELLPREF" ]]; then 
+	ERRORMSG="Unspecified shell\n"
+	ERRORMSG+="${bold}Usage:${normal} konsoleRunLast &lt;terminal emulator&gt;\n\n";
+	ERRORMSG+="Example:\n"
+	ERRORMSG+="konsoleRunLast xfce4-terminal\n"
+
+	error "Unspecified shell" "$ERRORMSG"
+	exit 1;
+fi
+
+if [[ ! $OKMYSHELL ]]; then
+	ERRORMSG="Could not locate terminal executable for ${bold}$MYSHELLPREF${normal}.\n"
+	ERRORMSG="Please verify your configuration and try again.\n\n"
+	ERRORMSG+="${bold}Cannot continue...${normal}\n"
+	error "Could not locate shell" "$ERRORMSG"
+	exit 1
+fi
+
+# Get the current window so we can toggle back to it
 XDCURRENT=$(xdotool getactivewindow);
 
-sleep 0.1
-xdotool search --onlyvisible -name konsole windowfocus --sync 
+# Lookup the requested window By class name...note the CLASSNAME usage here. Prior, I 
+# was using -title...which causes issues when the name of the binary is not in the title, 
+# So switching to -classname finally solved about an hour hacking session
+
+# Activate our requested window. Wait .2 seconds...send "fc -s" to repeat last command, then
+# wait 0.2 more seconds.  Send the <enter> key to execute fc -s. Then return to our original window
+xdotool search --onlyvisible -classname "$MYSHELLPREF" windowfocus --sync
 xdotool type --delay 20 'fc -s'
 xdotool key --delay 20 Return
 
+# Return to our original window
 xdotool windowfocus $XDCURRENT
-

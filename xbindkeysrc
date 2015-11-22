@@ -1,10 +1,12 @@
-"/home/erik/bin/toggleWindow sublime_text /home/erik/bin/sublime"
+"/usr/bin/xfce4-terminal --drop-down"
+  F1
+"~/bin/toggleWindow sublime_text ~/bin/sublime"
   F4
-"/home/erik/bin/toggleWindow konsole /usr/bin/konsole"
+"~/bin/toggleWindow xfce4-terminal /usr/bin/xfce4-terminal"
   F2
-"/home/erik/bin/toggleWindow terminator '/usr/bin/terminator -l logs'"
+"~/bin/toggleWindow terminator '/usr/bin/terminator -l logs'"
   F3
-"/home/erik/bin/konsoleRunLast"
+"~/bin/konsoleRunLast xfce4-terminal"
   Control+Shift+1
 
 # Volume. Ctrl+Shift+(NumPad +) OR Volume+ fancy button

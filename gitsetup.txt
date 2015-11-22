@@ -1,0 +1,3 @@
+git config credential.helper cache
+git config --global credential.helper store 
+
