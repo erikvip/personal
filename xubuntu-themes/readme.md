@@ -1,11 +1,11 @@
-Now:
+## Now
+
 Xfce-dusk-gtk3
 or
 SableNC
 
 
-
-Possibles:
+## Possible Others
 Ambiance Dark
 Ambiance DS Blue B12
 Delorian-Dark
@@ -14,3 +14,6 @@ Sable
 SableNC
 The days of gray
 
+## Install
+
+Unzip theme then copy to ~/.local/share/theme and ~/.themes
