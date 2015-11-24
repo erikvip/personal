@@ -30,27 +30,64 @@
 #
 ################################################################################
 
-# Shell "Class" to bring to front
-MYSHELLPREF=$1
+###
+# Main program
+# All the crap below this is just to test argument correctness, and setup our environment.
+# This is the real program here in main(). Just switch to window $1, type 'fc<enter>' and switch back
+###
+main() 
+{
+	# Get the current window so we can toggle back to it
+	XDCURRENT=$(xdotool getactivewindow);
 
-# Check for Zenity and Recode...bah, this is just for error reporting
-OKZENITY=$(which zenity)
-OKRECODE=$(which recode)
+	# Lookup the requested window By class name...note the CLASSNAME usage here. Prior, I 
+	# was using -title...which causes issues when the name of the binary is not in the title, 
+	# So switching to -classname finally solved after about an hour hacking & kicking at the terminal
 
-# Check to make sure our shell exists as a executable
-OKMYSHELL=$(which "$MYSHELLPREF")
+	# Activate our requested window. Wait .2 seconds...send "fc -s" to repeat last command, then
+	# wait 0.2 more seconds.  Send the <enter> key to execute fc -s. Then return to our original window
+	xdotool search --onlyvisible -classname "$MYSHELLPREF" windowfocus --sync
+	xdotool type --delay 20 'fc -s'
+	xdotool key --delay 20 Return
 
-# Find out if we're interactive terminal or not...interactive terminals should only be for debugging
-# So kind of pointless to do all these checks I guess...but whatever, here we go!
-if [[ $(tty) -eq 'not a tty' ]]; then
-	bold=$(tput bold)
-	normal=$(tput sgr0)
-	MYINTERACTIVE="true"
-else
-	bold="<b>"
-	normal="</b>"
-	MYINTERACTIVE="false"
-fi
+	# Return to our original window
+	xdotool windowfocus $XDCURRENT
+}
+
+###
+# Setup initial variables for terminal / non tty environment
+###
+init() 
+{
+	# Shell "Class" to bring to front
+	MYSHELLPREF=$1
+
+	# Check for Zenity and Recode...bah, this is just for error reporting
+	OKZENITY=$(which zenity)
+	OKRECODE=$(which recode)
+
+	# Check to make sure our shell exists as a executable
+	OKMYSHELL=$(which "$MYSHELLPREF")
+
+	# Find out if we're interactive terminal or not...interactive terminals should only be for debugging
+	# So kind of pointless to do all these checks I guess...but whatever, here we go!
+	TTYTEST=$(tty)
+	if [[ "$TTYTEST" != 'not a tty' ]]; then
+		bold=$(tput bold)
+		normal=$(tput sgr0)
+		MYINTERACTIVE="true"
+	else
+		bold="<b>"
+		normal="</b>"
+		MYINTERACTIVE="false"
+	fi
+
+	setup_zenity
+	setup_recode
+	verify_args
+	main
+}
+
 
 ####
 # Send a message, using the shell (interactive) or zenity to X11 (non-interactive)
@@ -61,7 +98,8 @@ fi
 # @param $2- The message to send. May use the ${bold} and ${normal} entities we assigned before
 # @return void
 ###
-message() {
+message() 
+{
 	if [[ $1 == 'info' ]]; then
 		MSGTYPE='--info';
 		shift
@@ -94,65 +132,70 @@ error() {
 	exit 1
 }
 
-# Verify zenity is installed, and attempt to install it if not
-if [[ ! $OKZENITY ]]; then
-	ERRORMSG="No zenity installed, required for our fancy X popup messages!\n"
-	ERRORMSG+="Attempting to install via ${bold}apt-get install -y zenity${normal}. This will only work if NOPASSWD is set in sudoers.\n"
-	ERRORMSG+="If this fails, run: ${bold}sudo apt-get install -y zenity${normal} yourself.\n\n"
-	message "Could not locate Zenity" "$ERRORMSG"
-	sleep 2
+###
+# Try to install zenity if it's not available
+###
+setup_zenity() 
+{
+	# Verify zenity is installed, and attempt to install it if not
+	if [[ ! $OKZENITY ]]; then
+		ERRORMSG="No zenity installed, required for our fancy X popup messages!\n"
+		ERRORMSG+="Attempting to install via ${bold}apt-get install -y zenity${normal}. This will only work if NOPASSWD is set in sudoers.\n"
+		ERRORMSG+="If this fails, run: ${bold}sudo apt-get install -y zenity${normal} yourself.\n\n"
+		message "Could not locate Zenity" "$ERRORMSG"
+		sleep 2
 
-	sudo apt-get -y install zenity || error "Zenity installation failed" "Please manually install zenity and try again"
-fi
+		sudo apt-get -y install zenity || error "Zenity installation failed" "Please manually install zenity and try again"
+	fi
+}
 
+###
 # Verify recode is installed, and attempt to install it if not. 
 # Recode kind of sucks...we just use it to cross convert between &gt; &lt; html-entities, which is
 # what zenity requires. Kind of pointless, since this script will almost *always* be ran from inside
 # X11...but I'm being through, damnit!
-if [[ ! $OKRECODE ]]; then
-	ERRORMSG="No recode installed.  We need this for our fancy messages!\n\n";
-	ERRORMSG+="Attempting to install via: ${bold}sudo apt-get -y install recode${normal}\n\n";
-	ERRORMSG+="If this fails, try to install yourself via: ${bold}sudo apt-get -y install recode${normal}\n\n";
-	message "Could not locate recode" "$ERRORMSG"
-	sleep 2
+###
+setup_recode() 
+{
+	if [[ ! $OKRECODE ]]; then
+		ERRORMSG="No recode installed.  We need this for our fancy messages!\n\n";
+		ERRORMSG+="Attempting to install via: ${bold}sudo apt-get -y install recode${normal}\n\n";
+		ERRORMSG+="If this fails, try to install yourself via: ${bold}sudo apt-get -y install recode${normal}\n\n";
+		message "Could not locate recode" "$ERRORMSG"
+		sleep 2
 
-	sudo apt-get -y install recode && message info "Recode installed successfuly." "Recode has been installed successfully" \
-		|| error "Recode installation failed" "Please manually install recode and try again"
-fi
+		sudo apt-get -y install recode && message info "Recode installed successfuly." "Recode has been installed successfully" \
+			|| error "Recode installation failed" "Please manually install recode and try again"
+	fi
+}
 
+###
+# Verify arguments are correct and not missing
+# 
 # Finally, now that deps have been verified.  Make sure our passed argument ($1) is for a valid shell
 # Hmmm...we should also do an xdotool here and make sure we can find the damn thing too...yea...
 # that would have helped a lot when I was pulling my hair out a second ago, doh!
-if [[ -z "$MYSHELLPREF" ]]; then 
-	ERRORMSG="Unspecified shell\n"
-	ERRORMSG+="${bold}Usage:${normal} konsoleRunLast &lt;terminal emulator&gt;\n\n";
-	ERRORMSG+="Example:\n"
-	ERRORMSG+="konsoleRunLast xfce4-terminal\n"
+###
+verify_args() 
+{
+	if [[ -z "$MYSHELLPREF" ]]; then 
+		ERRORMSG="Unspecified shell\n"
+		ERRORMSG+="${bold}Usage:${normal} konsoleRunLast &lt;terminal emulator&gt;\n\n";
+		ERRORMSG+="Example:\n"
+		ERRORMSG+="konsoleRunLast xfce4-terminal\n"
 
-	error "Unspecified shell" "$ERRORMSG"
-	exit 1;
-fi
+		error "Unspecified shell" "$ERRORMSG"
+		exit 1;
+	fi
 
-if [[ ! $OKMYSHELL ]]; then
-	ERRORMSG="Could not locate terminal executable for ${bold}$MYSHELLPREF${normal}.\n"
-	ERRORMSG="Please verify your configuration and try again.\n\n"
-	ERRORMSG+="${bold}Cannot continue...${normal}\n"
-	error "Could not locate shell" "$ERRORMSG"
-	exit 1
-fi
+	if [[ ! $OKMYSHELL ]]; then
+		ERRORMSG="Could not locate terminal executable for ${bold}$MYSHELLPREF${normal}.\n"
+		ERRORMSG="Please verify your configuration and try again.\n\n"
+		ERRORMSG+="${bold}Cannot continue...${normal}\n"
+		error "Could not locate shell" "$ERRORMSG"
+		exit 1
+	fi
+}
 
-# Get the current window so we can toggle back to it
-XDCURRENT=$(xdotool getactivewindow);
-
-# Lookup the requested window By class name...note the CLASSNAME usage here. Prior, I 
-# was using -title...which causes issues when the name of the binary is not in the title, 
-# So switching to -classname finally solved about an hour hacking session
-
-# Activate our requested window. Wait .2 seconds...send "fc -s" to repeat last command, then
-# wait 0.2 more seconds.  Send the <enter> key to execute fc -s. Then return to our original window
-xdotool search --onlyvisible -classname "$MYSHELLPREF" windowfocus --sync
-xdotool type --delay 20 'fc -s'
-xdotool key --delay 20 Return
-
-# Return to our original window
-xdotool windowfocus $XDCURRENT
+# And....GO!
+init $*
