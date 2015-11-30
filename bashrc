@@ -79,6 +79,9 @@ fi
 
 PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\]\[\033[00m\]\$ '
 
+# Prompt for systems without __git_ps1 function (git-core)
+#PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
