@@ -1,5 +1,5 @@
 # Turn on mouse support
-set mouse
+#set mouse
 
 
 # Good sources for nano syntax highlighters:
@@ -7,4 +7,15 @@ set mouse
 # https://github.com/serialhex/nano-highlight
 
 # Custom syntax highlighters and stuff
-include "~/.nano/*.nanorc"
+#include "~/.nano/*.nanorc"
+include "/home/pi/.nano/apacheconf.nanorc"
+include "/home/pi/.nano/config.nanorc"
+include "/home/pi/.nano/sql.nanorc"
+include "/home/pi/.nano/inputrc.nanorc"
+include "/home/pi/.nano/rsync.nanorc"
+include "/home/pi/.nano/bash.nanorc"
+include "/home/pi/.nano/log-stuff.nanorc"
+include "/home/pi/.nano/conf.nanorc"
+include "/home/pi/.nano/config2.nanorc"
+include "/home/pi/.nano/config3.nanorc"
+include "/home/pi/.nano/markdown.nanorc"
