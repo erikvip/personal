@@ -1,0 +1,23 @@
+#!/bin/bash
+# Check a php file for syntax errors & coding errors
+# Run php -l, and if no errors are found, run phpcs
+
+if [ -z $1 ]; then
+    echo "No php file specified"
+    exit 1
+fi
+
+# Check php syntax, exit here if we have syntax errors
+/usr/bin/php -l $* 
+
+# Exit here if we have syntax errors
+[ "$?" != "0" ] && exit 1
+
+
+if [ "$2" == "fix" ]; then
+    /usr/bin/phpcbf --standard=PSR2 $1
+else
+    /usr/bin/phpcs --standard=PSR2 $1
+fi
+
+
