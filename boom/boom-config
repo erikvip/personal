@@ -1,0 +1,3 @@
+BOOM_ENC_FILE=~/work/personal/boom/boom-data.enc
+BOOM_ENC_PASSWD="!! PASSWORD HERE !!"
+BOOM_FILE=~/.boom
