@@ -1,6 +1,5 @@
 randpw(){ < /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-16};echo;}
-
-alias xopen=xdg-open
+ctime() { date +%s; }
 
 # Write history file immediately after command is executed, before displaying
 # Prompt again. This allows history to be saved between open terminal windows
@@ -17,11 +16,22 @@ case $- in
 esac
 
 export TODOTXT_DEFAULT_ACTION=ls
-alias t='~/bin/todo.sh -d ~/.config/todo/todo.cfg'
+
+alias xopen=xdg-open
+alias highlightsyntax=pygmentize
+alias syntax=pygmentize
+
+#Alias for todo.sh, and setup bash completion for t alias
+alias t='~/bin/todo.sh -d ~/.todo/config'
+complete -F _todo t
 
 alias ll='ls -hlF'
 
 
+# Setup AWS-cli command completion, if installed
+if [ -f "$(whereis -f aws_completer | cut -d ' ' -f2)" ]; then
+	complete -C "$(whereis -f aws_completer | cut -d ' ' -f2)" aws
+fi
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -79,9 +89,6 @@ fi
 
 PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\]\[\033[00m\]\$ '
 
-# Prompt for systems without __git_ps1 function (git-core)
-#PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
@@ -133,3 +140,4 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
