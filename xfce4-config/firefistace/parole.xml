@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="parole" version="1.0">
+  <property name="video" type="empty">
+    <property name="videosink" type="empty"/>
+  </property>
+  <property name="subtitles" type="empty">
+    <property name="font" type="string" value="Sans Bold 20"/>
+  </property>
+  <property name="window" type="empty">
+    <property name="maximized" type="bool" value="false"/>
+    <property name="width" type="int" value="1327"/>
+    <property name="height" type="int" value="765"/>
+  </property>
+  <property name="audio" type="empty">
+    <property name="volume" type="int" value="33"/>
+  </property>
+  <property name="folders" type="empty">
+    <property name="last-used-media" type="string" value="/home/erikp/work/camera/data/20151209/processed/18"/>
+  </property>
+  <property name="playlist" type="empty">
+    <property name="show-playlist" type="bool" value="false"/>
+  </property>
+</channel>
