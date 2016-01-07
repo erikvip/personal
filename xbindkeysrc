@@ -2,8 +2,8 @@
   F1
 "~/bin/toggleWindow sublime_text ~/bin/sublime"
   F4
-"~/bin/toggleWindow xfce4-terminal /usr/bin/xfce4-terminal"
-  F2
+#"~/bin/toggleWindow xfce4-terminal /usr/bin/xfce4-terminal"
+#  F2
 "~/bin/toggleWindow terminator '/usr/bin/terminator -l logs'"
   F3
 "~/bin/konsoleRunLast xfce4-terminal"
