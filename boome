@@ -1,0 +1,36 @@
+#!/bin/bash
+
+set -o nounset  # Fail when access undefined variable
+set -o errexit  # Exit when a command fails
+
+# Source config vars
+source ~/.boom-config
+
+BOOM_MOD=$(stat -c %Y "${BOOM_FILE}")
+[ -f "${BOOM_ENC_FILE}" ] \
+    && BOOM_ENC_FILE_MOD=$(stat -c %Y "${BOOM_ENC_FILE}") \
+    || BOOM_ENC_FILE_MOD=0
+
+
+# Main program loop
+main() {
+
+    if [[ "${BOOM_MOD}" -gt "${BOOM_ENC_FILE_MOD}" ]]; then
+        encrypt_boom_file
+    fi
+}
+
+# Encrypt the $BOOM_FILE to $BOOM_ENC_FILE using $BOOM_ENC_PASSWD
+encrypt_boom_file() {
+
+    # Encrypt the file. -a specifies base64
+    openssl aes-256-cbc -salt -a -k "${BOOM_ENC_PASSWD}" -in "${BOOM_FILE}" -out "${BOOM_ENC_FILE}"
+
+    echo "Changes in boom file detected. Encrypted .boom data file to ${BOOM_ENC_FILE}"
+
+}
+
+# Start up
+main
+
+

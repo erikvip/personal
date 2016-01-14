@@ -25,5 +25,6 @@ DropdownOpacity=85
 ShortcutsNoMnemonics=TRUE
 ShortcutsNoMenukey=TRUE
 DropdownKeepOpenDefault=TRUE
-DropdownHeight=47
+DropdownHeight=55
+DropdownMoveToActive=FALSE
 
