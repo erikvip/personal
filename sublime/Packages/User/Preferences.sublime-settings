@@ -1,0 +1,11 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/Twilight.tmTheme",
+	"font_size": 17.0,
+	"ignored_packages":
+	[
+		"Markdown",
+		"Vintage"
+	],
+	"spell_check": true,
+	"translate_tabs_to_spaces": false
+}
