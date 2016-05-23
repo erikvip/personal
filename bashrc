@@ -1,5 +1,8 @@
 randpw(){ < /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-16};echo;}
 ctime() { date +%s; }
+pause(){
+ read -n1 -rsp $'Press any key to continue or Ctrl+C to exit...\n'
+}
 
 # Write history file immediately after command is executed, before displaying
 # Prompt again. This allows history to be saved between open terminal windows
@@ -20,6 +23,17 @@ export TODOTXT_DEFAULT_ACTION=ls
 alias xopen=xdg-open
 alias highlightsyntax=pygmentize
 alias syntax=pygmentize
+alias mp3info=eyeD3
+
+#alias code='cat $1 | pygmentize | less -R'
+code() {
+   [ ! -f "$1" ] && echo "No input file specified." && exit 1
+   pygmentize $1
+}
+
+lcode() {
+   code $@ | less -R
+}
 
 #Alias for todo.sh, and setup bash completion for t alias
 alias t='~/bin/todo.sh -d ~/.todo/config'
@@ -140,4 +154,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+export PATH="$PATH:/home/erikp/bin"
+export PATH="$PATH:/home/erikp/apps/PhpStorm-143.382.38/bin"
+
 
