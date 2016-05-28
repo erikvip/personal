@@ -27,8 +27,8 @@ alias mp3info=eyeD3
 
 #alias code='cat $1 | pygmentize | less -R'
 code() {
-   [ ! -f "$1" ] && echo "No input file specified." && exit 1
-   pygmentize $1
+#   [ ! -f "$1" ] && echo "No input file specified." && exit 1
+   pygmentize $@
 }
 
 lcode() {

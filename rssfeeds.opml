@@ -1,0 +1,86 @@
+<opml version="1.0" xmlns:fz="urn:forumzilla:">
+  <head>
+    <title>Thunderbird OPML Export - Blogs &amp; News Feeds</title>
+    <dateCreated>Sat, 28 May 2016 15:15:59 GMT</dateCreated>
+  </head>
+  <body>
+    <outline title="Tech">
+      <outline title="Hacker News">
+        <outline type="rss" title="Hacker News" text="Hacker News" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://news.ycombinator.com/rss" htmlUrl="https://news.ycombinator.com/"/></outline>
+      <outline title="Coding Horror">
+        <outline type="rss" title="Coding Horror" text="Coding Horror" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://feeds.feedburner.com/codinghorror/" htmlUrl="https://blog.codinghorror.com/"/></outline>
+      <outline title="The Daily WTF">
+        <outline type="rss" title="The Daily WTF" text="The Daily WTF" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://syndication.thedailywtf.com/TheDailyWtf" htmlUrl="http://thedailywtf.com/"/></outline>
+      <outline title="Slashdot">
+        <outline type="rss" title="Slashdot" text="Slashdot" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://rss.slashdot.org/Slashdot/slashdot" htmlUrl="https://slashdot.org/"/></outline></outline>
+    <outline title="Diy">
+      <outline title="Make: DIY Projects, How-Tos, Electronics, Crafts and Ideas for Makers">
+        <outline type="rss" title="Make: DIY Projects, How-Tos, Electronics, Crafts and Ideas for Makers" text="Make: DIY Projects, How-Tos, Electronics, Crafts and Ideas for Makers" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://blog.makezine.com/index.xml" htmlUrl="null"/></outline>
+      <outline title="Instructables: exploring">
+        <outline type="rss" title="Instructables: exploring" text="Instructables: exploring" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://www.instructables.com/tag/type:instructable/rss.xml" htmlUrl="http://www.instructables.com"/></outline>
+      <outline title="Hackaday">
+        <outline type="rss" title="Hackaday" text="Hackaday" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://www.hackaday.com/rss.xml" htmlUrl="http://hackaday.com"/></outline>
+      <outline title="Raspberry Pi">
+        <outline type="rss" title="Raspberry Pi" text="Raspberry Pi" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://www.raspberrypi.org/feed" htmlUrl="https://www.raspberrypi.org"/></outline>
+      <outline title="Arduino Blog">
+        <outline type="rss" title="Arduino Blog" text="Arduino Blog" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://www.arduino.cc/blog/?feed=rss2" htmlUrl="https://blog.arduino.cc"/></outline></outline>
+    <outline title="Marijuana">
+      <outline title="Medical Marijuana Strains">
+        <outline type="rss" title="Medical Marijuana Strains" text="Medical Marijuana Strains" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://feeds.feedburner.com/MedicalMarijuanaStrains" htmlUrl="http://www.medicalmarijuanastrains.com"/></outline>
+      <outline title="Hail Mary Jane">
+        <outline type="rss" title="Hail Mary Jane" text="Hail Mary Jane" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://feeds.feedburner.com/Sportfiends" htmlUrl="http://www.hailmaryjane.com"/></outline>
+      <outline title="NORML Blog, Marijuana Law Reform">
+        <outline type="rss" title="NORML Blog, Marijuana Law Reform" text="NORML Blog, Marijuana Law Reform" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://blog.norml.org/feed/" htmlUrl="http://blog.norml.org"/></outline>
+      <outline title="Marijuana: news, laws, advocacy, and discussion.">
+        <outline type="rss" title="Marijuana: news, laws, advocacy, and discussion." text="Marijuana: news, laws, advocacy, and discussion." version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://www.reddit.com/r/Marijuana/.rss" htmlUrl="https://www.reddit.com/r/Marijuana/"/></outline>
+      <outline title="High Times">
+        <outline type="rss" title="High Times" text="High Times" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://hightimes.com/feeds/home.xml" htmlUrl="http://www.hightimes.com"/></outline>
+      <outline title="420 Magazine ®">
+        <outline type="rss" title="420 Magazine ®" text="420 Magazine ®" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://420magazine.com/forums/external.php?type=RSS2" htmlUrl="http://www.420magazine.com/forums/"/></outline>
+      <outline title="MedicalMarijuanaBlog.com">
+        <outline type="rss" title="MedicalMarijuanaBlog.com" text="MedicalMarijuanaBlog.com" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://www.medicalmarijuanablog.com/feed" htmlUrl="http://www.medicalmarijuanablog.com"/></outline>
+      <outline title="marijuana - Google News">
+        <outline type="rss" title="marijuana - Google News" text="marijuana - Google News" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://news.google.com/news?hl=en&amp;gl=us&amp;q=marijuana&amp;um=1&amp;ie=UTF-8&amp;output=rss" htmlUrl="http://news.google.com/news?hl=en&amp;gl=us&amp;pz=1&amp;ned=us&amp;q=marijuana"/></outline>
+      <outline title="The Weed Blog">
+        <outline type="rss" title="The Weed Blog" text="The Weed Blog" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://www.theweedblog.com/feed/" htmlUrl="http://www.theweedblog.com"/></outline>
+      <outline title="MPP Blog">
+        <outline type="rss" title="MPP Blog" text="MPP Blog" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://feeds.feedburner.com/blogmpp" htmlUrl="http://blog.mpp.org"/></outline>
+      <outline title="Leafly News &amp; Culture">
+        <outline type="rss" title="Leafly News &amp; Culture" text="Leafly News &amp; Culture" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://www.leafly.com/news/rss" htmlUrl="http://www.leafly.com/news"/></outline>
+      <outline title="The Cannabist">
+        <outline type="rss" title="The Cannabist" text="The Cannabist" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://www.thecannabist.co/feed/" htmlUrl="http://www.thecannabist.co"/></outline>
+      <outline title="Marijuana Business Daily">
+        <outline type="rss" title="Marijuana Business Daily" text="Marijuana Business Daily" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://mmjbusinessdaily.com/feed/" htmlUrl="http://mjbizdaily.com"/></outline>
+      <outline title="The Daily Chronic">
+        <outline type="rss" title="The Daily Chronic" text="The Daily Chronic" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://feeds.feedburner.com/thedailychronic" htmlUrl="http://www.thedailychronic.net"/></outline>
+      <outline title="Leaf Science">
+        <outline type="rss" title="Leaf Science" text="Leaf Science" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://www.leafscience.com/feed/" htmlUrl="http://www.leafscience.com"/></outline></outline>
+    <outline title="Security">
+      <outline title="Bugtraq">
+        <outline type="rss" title="Bugtraq" text="Bugtraq" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://seclists.org/rss/bugtraq.rss" htmlUrl="http://seclists.org/#bugtraq"/></outline>
+      <outline title="Schneier on Security">
+        <outline type="rss" title="Schneier on Security" text="Schneier on Security" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://www.schneier.com/blog/index.rdf" htmlUrl="https://www.schneier.com/blog/"/></outline>
+      <outline title="News ≈ Packet Storm">
+        <outline type="rss" title="News ≈ Packet Storm" text="News ≈ Packet Storm" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://packetstormsecurity.org/headlines.xml" htmlUrl="https://packetstormsecurity.com/"/></outline>
+      <outline title="Security Tool Files ≈ Packet Storm">
+        <outline type="rss" title="Security Tool Files ≈ Packet Storm" text="Security Tool Files ≈ Packet Storm" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://packetstormsecurity.org/tools.xml" htmlUrl="https://packetstormsecurity.com/"/></outline>
+      <outline title="Exploit Files ≈ Packet Storm">
+        <outline type="rss" title="Exploit Files ≈ Packet Storm" text="Exploit Files ≈ Packet Storm" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://packetstormsecurity.org/exploits.xml" htmlUrl="https://packetstormsecurity.com/"/></outline></outline>
+    <outline title="News">
+      <outline title="KSL / Utah / Local Stories">
+        <outline type="rss" title="KSL / Utah / Local Stories" text="KSL / Utah / Local Stories" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://www.ksl.com/xml/148.rss" htmlUrl="http://www.ksl.com"/></outline></outline>
+    <outline title="Linux">
+      <outline title="All commands">
+        <outline type="rss" title="All commands" text="All commands" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://feeds2.feedburner.com/Command-line-fu" htmlUrl="http://www.commandlinefu.com/commands/browse/rss"/></outline>
+      <outline title="Ubuntu Geek">
+        <outline type="rss" title="Ubuntu Geek" text="Ubuntu Geek" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://www.ubuntugeek.com/feed/" htmlUrl="http://www.ubuntugeek.com"/></outline></outline>
+    <outline title="Science">
+      <outline title="Bad Astronomy">
+        <outline type="rss" title="Bad Astronomy" text="Bad Astronomy" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://www.slate.com/blogs/bad_astronomy.fulltext.all.10.rss" htmlUrl="http://www.slate.com/blogs/bad_astronomy.fulltext.all.10.rss"/></outline></outline>
+    <outline title="Comics">
+      <outline title="xkcd.com">
+        <outline type="rss" title="xkcd.com" text="xkcd.com" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://xkcd.com/rss.xml" htmlUrl="http://xkcd.com/"/></outline>
+      <outline title="The Oatmeal - Comics, Quizzes, &amp; Stories">
+        <outline type="rss" title="The Oatmeal - Comics, Quizzes, &amp; Stories" text="The Oatmeal - Comics, Quizzes, &amp; Stories" version="RSS" fz:quickMode="null" fz:options="null" xmlUrl="http://theoatmeal.com/feed/rss" htmlUrl="http://theoatmeal.com/"/></outline></outline>
+  </body>
+</opml>
