@@ -7,15 +7,16 @@
 # https://github.com/serialhex/nano-highlight
 
 # Custom syntax highlighters and stuff
-#include "~/.nano/*.nanorc"
-include "/home/erikp/.nano/apacheconf.nanorc"
-include "/home/erikp/.nano/config.nanorc"
-include "/home/erikp/.nano/sql.nanorc"
-include "/home/erikp/.nano/inputrc.nanorc"
-include "/home/erikp/.nano/rsync.nanorc"
-include "/home/erikp/.nano/bash.nanorc"
-include "/home/erikp/.nano/log-stuff.nanorc"
-include "/home/erikp/.nano/conf.nanorc"
-include "/home/erikp/.nano/config2.nanorc"
-include "/home/erikp/.nano/config3.nanorc"
-include "/home/erikp/.nano/markdown.nanorc"
+include "~/.nano/*.nanorc"
+
+#include "/home/erikp/.nano/apacheconf.nanorc"
+#include "/home/erikp/.nano/config.nanorc"
+#include "/home/erikp/.nano/sql.nanorc"
+#include "/home/erikp/.nano/inputrc.nanorc"
+#include "/home/erikp/.nano/rsync.nanorc"
+#include "/home/erikp/.nano/bash.nanorc"
+#include "/home/erikp/.nano/log-stuff.nanorc"
+#include "/home/erikp/.nano/conf.nanorc"
+#include "/home/erikp/.nano/config2.nanorc"
+#include "/home/erikp/.nano/config3.nanorc"
+#include "/home/erikp/.nano/markdown.nanorc"
