@@ -1,13 +1,3 @@
-randpw(){ < /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-16};echo;}
-ctime() { date +%s; }
-pause(){
- read -n1 -rsp $'Press any key to continue or Ctrl+C to exit...\n'
-}
-
-# Write history file immediately after command is executed, before displaying
-# Prompt again. This allows history to be saved between open terminal windows
-#export PROMPT_COMMAND='history -a'
-
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -18,34 +8,46 @@ case $- in
       *) return;;
 esac
 
-export TODOTXT_DEFAULT_ACTION=ls
+# Write history file immediately after command is executed, before displaying
+# Prompt again. This allows history to be saved between open terminal windows
+export PROMPT_COMMAND='history -a'
 
+# Default editor
+export EDITOR="nano"
+
+# Add home bin and user-installed python packages to path
+PYBIN=$(python -c 'import site;import os; print "{}{}bin".format(site.getuserbase(), os.sep)');
+export PATH="${PATH}:~/bin:${PYBIN}"
+
+# Command shortcuts
 alias xopen=xdg-open
 alias highlightsyntax=pygmentize
 alias syntax=pygmentize
 alias mp3info=eyeD3
+alias pt=pivotal_tools
+alias bb=stash
+alias bitbucket=stash
 
-#alias code='cat $1 | pygmentize | less -R'
-code() {
-#   [ ! -f "$1" ] && echo "No input file specified." && exit 1
-   pygmentize $@
-}
+# Heler functions
+code() { pygmentize $@; }
+lcode() { code $@ | less -R; }
+randpw(){ < /dev/urandom LC_ALL=c tr -dc _A-Z-a-z-0-9 | head -c${1:-16};echo;}
+ctime() { date +%s; }
+pause(){ read -n1 -rsp $'Press any key to continue or Ctrl+C to exit...\n'; }
 
-lcode() {
-   code $@ | less -R
-}
 
 #Alias for todo.sh, and setup bash completion for t alias
 alias t='~/bin/todo.sh -d ~/.todo/config'
 complete -F _todo t
+export TODOTXT_DEFAULT_ACTION=ls
+
 
 alias ll='ls -hlF'
 
-
 # Setup AWS-cli command completion, if installed
-if [ -f "$(whereis -f aws_completer | cut -d ' ' -f2)" ]; then
-	complete -C "$(whereis -f aws_completer | cut -d ' ' -f2)" aws
-fi
+#if [ -f "$(whereis -f aws_completer | cut -d ' ' -f2)" ]; then
+#	complete -C "$(whereis -f aws_completer | cut -d ' ' -f2)" aws
+#fi
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -57,6 +59,11 @@ shopt -s histappend
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
+
+# See http://stackoverflow.com/questions/9457233/unlimited-bash-history
+# Apparently, some bash commands may overwrite history file...
+export HISTFILE=~/.bash_all_history
+export HISTTIMEFORMAT="%a %b %d %Y %T "
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -94,6 +101,8 @@ if [ -n "$force_color_prompt" ]; then
 	color_prompt=
     fi
 fi
+
+
 
 #if [ "$color_prompt" = yes ]; then
 #    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
@@ -154,7 +163,20 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export PATH="$PATH:/home/erikp/bin"
-export PATH="$PATH:/home/erikp/apps/PhpStorm-143.382.38/bin"
 
+
+# Mac OS/X fixes and stuff
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	# Dumb os/x alias for __git_ps1.
+	source "/usr/local/etc/bash_completion.d/git-completion.bash"
+	source "/usr/local/etc/bash_completion.d/git-prompt.sh"
+
+	# Put our homebrew path before our system path so we can override commands via Homebrew
+	export PATH=$(echo $PATH | sed 's|/usr/local/bin||; s|/usr/local/sbin||; s|::|:|; s|^:||; s|\(.*\)|/usr/local/bin:/usr/local/sbin:\1|')
+	
+	export CLICOLOR=1
+fi
+
+# Source in site-specific, private variables (API keys and such)
+[ -e ~/.bash_private ] && source ~/.bash_private;
 
