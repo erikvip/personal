@@ -103,6 +103,31 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 
+# Custom git settings for __git_ps1 prompt
+# ========================================
+
+# '*'=unstaged changes
+# '+'=staged, but uncommited changes
+export GIT_PS1_SHOWDIRTYSTATE=1;
+
+# '$'=stash saved
+export GIT_PS1_SHOWSTASHSTATE=1; 
+
+# '%'=untracked files -- WARNING: may slow down prompt
+export GIT_PS1_SHOWUNTRACKEDFILES=0;
+
+# '>'=local commits on HEAD unpushed, 
+# '<'=upstream commits on HEAD unmerged
+# '<>'=Both, HEAD and upstream have diverged
+# '='=HEAD points to the same commit as its upstream
+export GIT_PS1_SHOWUPSTREAM="verbose";
+
+# "contains" -> newer tag (v1.6.3.2-25), 
+# "branch" -> relative to newer tag or branch (master-4)
+# "describe" -> older tag (v1.6.3.1-13-gdd42c2f)
+# "default" -> exactly matching tag
+export GIT_PS1_DESCRIBE_STYLE="branch";
+
 
 #if [ "$color_prompt" = yes ]; then
 #    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
