@@ -24,9 +24,6 @@ alias xopen=xdg-open
 alias highlightsyntax=pygmentize
 alias syntax=pygmentize
 alias mp3info=eyeD3
-alias pt=pivotal_tools
-alias bb=stash
-alias bitbucket=stash
 
 # Heler functions
 code() { pygmentize $@; }
@@ -57,8 +54,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
 
 # See http://stackoverflow.com/questions/9457233/unlimited-bash-history
 # Apparently, some bash commands may overwrite history file...
