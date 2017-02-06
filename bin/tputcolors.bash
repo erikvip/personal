@@ -1,5 +1,14 @@
 #!/bin/bash 
 
+# Hook calls to tput and if we're not running interactively, then just
+# Return an empty strings. 
+# This is necessary for pass through support when not running interactively
+# and set -o errexit is on, which would normally cause tput to exit with an
+# error status if $TERM is not defined due to an non-interactive session
+tput() {
+  tty -s && /usr/bin/tput $* || echo -n "";
+}
+
 # Reset - normal text
 normal=$(tput sgr0);
 
