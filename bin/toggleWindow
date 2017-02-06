@@ -3,31 +3,52 @@
 # Specify a keyword to search for window's name, and a command line to execute to start initially
 # toggleWindow <window keyword> <full path to executable>
 #
-# This is ment to be used in conjuntion with xbindkeys, e.g.:
+# This is meant to be used in conjuntion with xbindkeys, e.g.:
 # "/home/user/bin/toggleWindow sublime_text /home/erik/bin/sublime"
-#  F4
+
 # "/home/user/bin/toggleWindow konsole /usr/bin/konsole"
 #  F2
 #
 # The above will open/hide Sublime text with F4 key, and konsole with F2
 
-WINCLASS=$1
-CMD=$2
+source template.bash;
+source $(optparse.build);
+
+LOG_FILE='/tmp/toggleWindow.log'
+VERBOSE="true"
+
+redirect_fd "stdout" "${LOG_FILE}"
+redirect_fd "stderr" "${LOG_FILE}"
+
+debuglog() {
+	debug "$@"
+	#echo "$@"
+	#notify-send -i process-working-symbolic toggleWindow "$@"
+}
+
+WINCLASS=$1;
+CMD=${2:-};
+
+debuglog "WINCLASS: ${WINCLASS} CMD:${CMD}";
 
 WIN=$(xdotool search --classname $WINCLASS | tail -1)
 ACTIVEWIN=$(xdotool getactivewindow)
 
-#echo $WIN
+debuglog "WIN: ${WIN} ACTIVEWIN:${ACTIVEWIN}"
+
 if [ -z $WIN ]; then
-	#echo "Not running"
+	# Not running
+	debuglog "Window is not running, attempting to launch"
+	notify-send -i system-run "toggleWindow" "<b>${WINCLASS}</b> is not running.\nLaunching via <i>${CMD}</i>";
 	`$CMD &`
 else
 	if [ $WIN == $ACTIVEWIN ]; then
-		#echo "Window is active"
-#		xdotool windowunmap $WIN
+		# Window is active
+		debuglog "WIN is already the active win, calling xdotool windowminimize ${WIN}"
 		xdotool windowminimize $WIN
 	else
-		echo "Window is inactive"	
+		# Window is inactive
+		debuglog "WIN is running, but inactive. Calling windowmap then windowactivate"
 		xdotool windowmap $WIN
 		xdotool windowactivate $WIN
 
