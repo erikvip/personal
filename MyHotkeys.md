@@ -1,4 +1,11 @@
-My Custom Hotkeys (global)
+My Custom Hotkeys 
+=================
+^ = Ctrl ⎇ = ALT ⇧ = SHIFT ◆ = META
+␣ = SPACE ↹ = TAB ⎋ = ESC   ⌫ = BACKSPACE
+⌦ = DEL   ▲ = PGUP ▼ = PGDN ⎀ = INSERT
+↖ = HOME  ↘ = END  ⎉ = PAUSE  ⎊ = BREAK
+⎙ = PRINTSCREEN 🖩 = NUMPAD KEY
+
 =================
 | Key Combo               | Action                       | Source      |
 |-------------------------|------------------------------|-------------|
@@ -18,7 +25,29 @@ My Custom Hotkeys (global)
 | F3                      | Toggle Terminator            | xbindkeys   |
 | F4                      | Toggle Sublime               | xbindkeys   |
 | Ctrl+Shift+1            | Re-Run last Terminal Command | xbindkeys   |
-|                         |                              |             |
+|
+| Bash Shortcuts
+| ------------------------
+| Ctrl+A                   | Beginning of line
+| Ctrl+E                   | End of line
+| Ctrl+C                   | Kill current process
+| Ctrl+Z                   | Suspend current process
+| Ctrl+D                   | Logout / EOF
+| Ctrl+L                   | Clear screen
+| Ctrl+U                   | Cut current line left
+| Ctrl+K                   | Cut current line right
+| Ctrl+W                   | Cut word backwards
+| Alt+D                    | Cut word forwards
+| Ctrl+Y                   | Paste last cut (yank)
+| Alt+F                    | Moves forward one word
+| Alt+B                    | Moves backwards one word
+| Alt+U                    | UPPER case word forwards
+| Alt+L                    | lower case word forwards
+| Ctrl+ -                  | Undo
+| Ctrl+xx                  | Toggle cursor position 
+
+| Default XUbuntu Shortcuts
+| ------------------------
 | Alt+RightClick+Drag     | Resize window                | default     |
 | Alt+Ctrl+D              | Show Desktop (toggle)        | default     |
 | Alt+F5                  | Fill Window Horizontally     | default     |
@@ -34,15 +63,6 @@ My Custom Hotkeys (global)
 | ❖+T                     | Open Terminal                | default     |
 | ❖+F                     | Open File browser            | default     |
 | ❖+R                     | Open AppFinder (Run)         | default     |
+| Ctrl+Alt+L              | Lock Screen
 
 
-    
-      ꙮ
-    ꙮꙮꙮꙮ
-  ꙮꙮꙮꙮꙮꙮꙮ
-ꙮꙮꙮꙮꙮꙮꙮꙮꙮꙮ    
-ꙮꙮꙮꙮꙮꙮꙮꙮꙮꙮ
-  ꙮꙮꙮꙮꙮꙮꙮ
-    ꙮꙮꙮꙮ
-      ꙮ
-      ❖
