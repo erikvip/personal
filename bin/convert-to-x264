@@ -1,0 +1,191 @@
+#!/bin/bash
+#######################################
+# This script will convert INPUT file to x264. 
+# This reduces 720p videos to about 30% their original size
+# preset reduction and timing averages are below. These averages are
+# based on a 2.2GB MKV file at 47:07 minutes long.
+# Ultrafast - 61.37% - 1.4G - 2154 seconds - 35 minutes and 54 seconds
+# Superfast - 55.68% - 1.3G - 2903 seconds - 48 minutes and 23 seconds
+# Veryfast - 22.06% - 493M - 3810 seconds - 1 hours 3 minutes and 30 seconds
+# Faster - 25.27% - 565M - 5583 seconds - 1 hours 33 minutes and 3 seconds
+# Fast -  28.14% - 629M - 8125 seconds - 2 hours 15 minutes and 25 seconds
+# Medium - 27.29% - 610M - 10373 seconds - 2 hours 52 minutes and 53 seconds
+# Slow - 14.99% - 335M - 8827 seconds - 2 hours 27 minutes and 7 seconds
+########################################
+
+source template.bash;
+
+# The estimated size of the reduced output file. This is used for guessing percentage complete
+ESTIMATED_TARGET_SIZE="0.32";
+
+# Debugging output
+VERBOSE="false"
+
+SCRIPT_START_TIME=$(date '+%s');
+
+main() {
+    convert_to_x264
+}
+
+convert_to_x264() {
+    
+    # ffmpeg log leves - 16 errors, 24 warnings, 32 info
+    CONVERT_CMD="ffmpeg -i '${INPUT_FILE}' -vcodec libx264 -crf 20 -acodec aac -threads 2 -preset ${FFMPEG_PRESET} \
+      -loglevel 16 -stats -flags +global_header -strict experimental -ab 128k '${OUTPUT_FILE}'"
+
+    debug "${bold}Command:$normal ${CONVERT_CMD}"
+
+    NOHUP_FILE=$(tempfile -p "x264-" -s ".out");
+
+    # Startup in nohup.
+    eval nohup ${CONVERT_CMD} > "${NOHUP_FILE}" 2>&1 &
+
+    # Wait half a second for ffmpeg to start, so we can gather stats below
+    sleep 0.5
+
+    # Grab the ffmpeg pid, so we can make sure it's still running in our progress loop
+    FFPID=$(pgrep --full "ffmpeg -i ${INPUT_FILE}" | tail -1);
+    [ -z "${FFPID}" ] && echo "${bold}Command:$normal ${CONVERT_CMD}" && error "FFmpeg did not start. Does your preset file exist? Using preset: ${FFMPEG_PRESET}".
+
+    # Input file size
+    INSIZE=$(stat -c "%s" "${INPUT_FILE}");
+
+    # Target (estimated) size of output file.
+    TARGETSIZE=$(echo "${INSIZE} * ${ESTIMATED_TARGET_SIZE}" | bc -l | tr -d "\n" | xargs printf "%0.0f");
+
+    # Lenght of source video in seconds
+    LENGTH=$(ffprobe -i "${INPUT_FILE}"  -show_entries format=duration -v quiet | grep 'duration=' | cut -d'=' -f2- | xargs printf "%0.0f")
+
+    # This gets set to "true" after the FFMPEG pid dies. Used for removing our output file if we didn't fully finish
+    FFMPEG_FINISHED="false"
+
+    # Wait for ffmpeg to create $OUTPUT_FILE
+    while [ ! -f "${OUTPUT_FILE}" ]; do sleep 1; done
+
+    echo "Converting: ${bold}${INPUT_FILE}${normal} (${red}$(numfmt --to=iec-i --suffix=B ${INSIZE})${normal}) to ${bold}${OUTPUT_FILE}${normal} (${green}$(numfmt --to=iec-i --suffix=B ${TARGETSIZE})${normal} estimated)"
+
+    # Two lines, this will be our display area
+    echo; echo;
+
+    # Progress loop. Make sure ffmpeg is still running via /proc/PID, and output a fancy status bar
+    while [ -d "/proc/${FFPID}" ]; do
+        FFSTAT=$(tail "${NOHUP_FILE}" | tr "\r" "\n" | tail -1 | tr -d "\n" | tr -d "\r");
+        ELAPSEDTIME=$(echo "${FFSTAT}" | egrep -o 'time=[0-9:]*' | cut -d'=' -f2- | awk -F':' '{ print $1*3600+$2*60+$3 }');
+        PERCENT=$(echo "${ELAPSEDTIME} / ${LENGTH} * 100" | bc -l | xargs printf "%0.2f");
+  
+        echo -ne $cursor_up
+        echo -ne "\r${FFSTAT}\n"
+        ProgressBar ${ELAPSEDTIME:=0} ${LENGTH:=0} "Transcoding to ${OUTPUT_FILE}. About ${PERCENT}%% done. (${ELAPSEDTIME} / ${LENGTH})"
+        sleep 1
+    done
+
+    # FFmpeg finished properly (yay!)
+    FFMPEG_FINISHED="true"
+    OUTSIZE=$(stat -c "%s" "${OUTPUT_FILE}" | tr -d "\n");
+
+    REDUCTION_PERCENT=$(echo "${OUTSIZE} / ${INSIZE} * 100" | bc -l | xargs printf "%0.2f");
+
+    which numfmt > /dev/null && NUMFMT=1 || NUMFMT=0;
+    if [ "${NUMFMT}" == "1" ]; then
+        INSIZE_FORMATTED=$(numfmt --to=iec-i --suffix=B "${INSIZE}" )
+        OUTSIZE_FORMATTED=$(numfmt --to=iec-i --suffix=B "${OUTSIZE}" )
+    else
+        INSIZE_FORMATTED=$(ls -lah "${INPUT_FILE}" | awk -F " " '{ print $5 }' );
+        OUTSIZE_FORMATTED=$(ls -lah "${OUTPUT_FILE}" | awk -F " " '{ print $5 }' );
+    fi
+}
+
+
+function displaytime {
+  local T=$1
+  local D=$((T/60/60/24))
+  local H=$((T/60/60%24))
+  local M=$((T/60%60))
+  local S=$((T%60))
+  (( $D > 0 )) && printf '%d days ' $D
+  (( $H > 0 )) && printf '%d hours ' $H
+  (( $M > 0 )) && printf '%d minutes ' $M
+  (( $D > 0 || $H > 0 || $M > 0 )) && printf 'and '
+  printf '%d seconds\n' $S
+}
+
+# Cleanup for full and partial runs
+# Remove the output file if ffmpeg did not run completely
+finish() {
+    SCRIPT_END_TIME=$(date '+%s');
+    local elapsed=$(($SCRIPT_END_TIME - $SCRIPT_START_TIME))
+
+    echo
+    echo -n "Elapsed time: ${elapsed} seconds - "; 
+    displaytime "${elapsed}";
+
+
+    echo -n "${FFMPEG_PRESET} - Elapsed time: ${elapsed} seconds - " >> results.txt; 
+    displaytime "${elapsed}" >> results.txt;
+
+    # Remove nohup file    
+    NOHUP_FILE="${NOHUP_FILE:-}"
+    if [ ! -z "${NOHUP_FILE}" ]; then
+        debug "Cleanup: removing nohup file at: ${NOHUP_FILE}"
+        [ -f "${NOHUP_FILE}" ] && rm "${NOHUP_FILE}"
+    fi
+
+    # If ffmpeg did not finish, remove output file. Otherwise, output a status message
+    FFMPEG_FINISHED="${FFMPEG_FINISHED:-}";
+    if [ "${FFMPEG_FINISHED}" == "false" -a -f "${OUTPUT_FILE}" ]; then
+        echo "${red}${bold}Error:${normal} FFmpeg did not finish. Removing incomplete output file ${OUTPUT_FILE}"
+        rm "${OUTPUT_FILE}"
+
+        # FFmpeg did not shutdown cleanly. Send sighup signal
+        debug "Cleanup: terminating ffmpeg process (PID: ${FFPID})"
+        [ -z "${FFPID}" ] && kill "${FFPID}" || pkill --full "ffmpeg -i ${INPUT_FILE}"
+
+    elif [ "${FFMPEG_FINISHED}" == "true" -a -f "${OUTPUT_FILE}" ]; then
+        echo "${green}${bold}Success:${normal} ${OUTPUT_FILE} created. Reduced to ${bold}${REDUCTION_PERCENT}%${normal} of original file size. \
+(Output: ${bold}${green}${OUTSIZE_FORMATTED}${normal}. Input: ${bold}${red}${INSIZE_FORMATTED}${normal})"
+
+    else
+        if [ -e "${OUTPUT_FILE}" -a ! -s "${OUTPUT_FILE}" ]; then
+            rm "${OUTPUT_FILE}";
+            echo "${yellow}Cleanup:${normal} ffmpeg did not run, but created an empty output file. Removing zero byte output file ${OUTPUT_FILE}."
+        else
+            echo "${yellow}Cleanup:${normal} ffmpeg did not run. Leaving output file untouched."
+        fi
+    fi
+
+
+}
+
+# Validate command line and setup global variables
+setup() {
+    #INPUT_FILE="${1:-}"
+    OUTPUT_FILE=""
+
+    optparse.define short=i long=input desc="The input file to transcode (Required)" required="true" variable=INPUT_FILE value=""
+    optparse.define short=o long=output desc="Output file. Default is INPUT_FILE.mp4" variable=OUTPUT_FILE default=""
+    optparse.define short=p long=preset desc="Ffmpeg preset name." variable=FFMPEG_PRESET default="default"
+    source $(optparse.build);
+
+    # Make sure input file exists
+    [ -z "${INPUT_FILE}" ] && error "No input file specified.$normal$bold Usage:$normal ${SCRIPT_FILE} <input file> [output file]"
+    [ ! -f "${INPUT_FILE}" ] && error "Input file $bold${INPUT_FILE}$normal$red not found! Cannot continue"
+
+    # If an output file was not specified, remove the extension from INPUTFILE and use .mp4
+    [ -z "${OUTPUT_FILE}" ] && OUTPUT_FILE="${INPUT_FILE%.*}.mp4"
+
+    # Verify the output file does not exist
+    [ -f "${OUTPUT_FILE}" ] && error "Output file $bold${OUTPUT_FILE}$normal$red already exists! Will not overwrite. Cannot continue."
+
+    # Start trap AFTER input args have been verified
+    trap finish EXIT
+
+    main
+}
+
+#SCRIPT_FILE=${0};
+#source tputcolors.bash
+
+setup "$@"
+
+            
+
