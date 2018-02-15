@@ -1,0 +1,109 @@
+#!/bin/bash
+###############################################################################
+# Enable / disable inactive window opacity
+# With no options specified, compositor is toggled on or off, depending on 
+#	current state. 
+# Valid options:
+# on, true, yes		Enable compositing
+# off, false, no 	Disable compositing
+# + [value]			Increment inactive window opacity. Default value is +10
+# - [value]			Decrement inactive window opacity. Default value is -10
+# set <value>		Set inactive window opacity to value. Value is required in
+#	this context
+#
+# If no options are specified, or non-matching options, then the default 
+#	'toggle' option is assumed.
+# 
+###############################################################################
+
+set -o nounset  # Fail when access undefined variable 
+set -o errexit  # Exit when a command fails
+
+# Numeric regex check
+NUMERIC='^-?[0-9]+$';
+
+# Send a notification OSD
+notify() {
+	notify-send --icon=video-display "XFWM4 Compositor Opacity" "$*";
+}
+
+# Toggle compositor on or off
+opacity_toggle() {
+	notify "Toggling compositor opacity"
+	xfconf-query --channel=xfwm4 --property=/general/use_compositing --type=bool --toggle
+}
+# Enable compositor
+opacity_on() {
+	notify "Enabling compositor opacity"
+	xfconf-query --channel=xfwm4 --property=/general/use_compositing --type=bool --set=true	
+}
+# Disable compositor
+opacity_off() {
+	notify "Disabling compositor opacity"
+	xfconf-query --channel=xfwm4 --property=/general/use_compositing --type=bool --set=false
+}
+
+# Increment the inactive window opacity (or pass a negative number to decrement)
+opacity_inc() {
+	# Default value is +10
+	local _inc="${1:-10}";
+	local _val=$(xfconf-query --channel=xfwm4 --property=/general/inactive_opacity);
+	
+	((_val += _inc))
+
+	opacity_set $_val;
+}
+
+# Set opacity to the requested value. Force a range between 0-100
+opacity_set() {
+	local _val="${1:-100}";
+	if ! [[ $_val =~ $NUMERIC ]]; then
+		_val=100;
+	fi
+
+	[ "$_val" -gt 100 ] && _val=100; 
+	[ "$_val" -le 0 ] && _val=0;
+
+	notify "Inactive window opacity <b>${_val}%</b>"
+	xfconf-query --channel=xfwm4 --property=/general/inactive_opacity --set=${_val};
+}
+
+main() {
+	OP="${1:-}";
+	INC="${2:-10}";
+	VALTRUE=("on" "true" "yes");
+	VALFALSE=("off" "false" "no");
+
+	# If $2 is not numeric, use the default value (10)
+	if ! [[ $INC =~ $NUMERIC ]]; then
+		INC=10;
+	fi
+
+	case "${OP,,}" in
+		on|true|yes|1)
+			opacity_on
+			;;
+		off|false|no|0)
+			opacity_off
+			;;
+		+)
+			opacity_inc $INC
+			;;
+		-)
+			# If passed value is not negative, then negate the value
+			if ! [ "$INC" -le 0 ]; then
+				INC=$(($INC * -1));
+			fi
+			opacity_inc $INC
+			;;
+		set)
+			opacity_set $INC
+			;;
+		*)
+			opacity_toggle
+			;;
+	esac
+}
+
+
+main "$@"
