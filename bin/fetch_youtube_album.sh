@@ -55,7 +55,7 @@ main() {
                 _track=$(echo "${track}" | tr -d "\n" | tr -d "\r");
                 for v in $_track; do
                   if [[ "$v" =~ ^[0-9.]*$ ]]; then _trackno="${v//./}"; 
-                  elif [[ "$v" =~ ^[0-9]+:[0-9]+:?[0-9]?[0-9]?$ ]]; then _tracktime=$v; 
+                  elif [[ "$v" =~ ^.?[0-9]+:[0-9]+:?[0-9]?[0-9]?.?$ ]]; then _tracktime=$v; 
                   else _trackname="${_trackname} ${v/ /}";
                   fi
                 done;
@@ -63,6 +63,12 @@ main() {
                 if [[ -z "$_tracktime" ]]; then continue; fi
 
                 _trackname="${_trackname/# /}"
+                _tracktime="${_tracktime//\[/}";
+                _tracktime="${_tracktime//\]/}";
+                _tracktime="${_tracktime//\(/}";
+                _tracktime="${_tracktime//\)/}";
+
+
                 echo "Number: ${_trackno} Time: ${_tracktime} Name: ${_trackname}";
                 IFS=$'\n';
                 _time="${_tracktime}";
