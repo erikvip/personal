@@ -35,7 +35,8 @@ convert_to_x264() {
 
     debug "${bold}Command:$normal ${CONVERT_CMD}"
 
-    NOHUP_FILE=$(tempfile -p "x264-" -s ".out");
+#    NOHUP_FILE=$(tempfile -p "x264-" -s ".out");
+    NOHUP_FILE=$(mktemp x264-XXXXXXXXXX.out);
 
     # Startup in nohup.
     eval nohup ${CONVERT_CMD} > "${NOHUP_FILE}" 2>&1 &
