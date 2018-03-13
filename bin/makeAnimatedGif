@@ -1,0 +1,20 @@
+#!/bin/bash -eu
+
+if [ -z "$1" ]; then echo "Usage: makeAnimatedGif <video file> <output gif>"; exit; fi
+FILE=$1;
+if [ ! -e "$FILE" ]; then echo "File $FILE not found"; exit; fi
+if [ -z "$2" ]; then echo "Output gif filename not specified or already exists - will not overwrite."; exit; fi
+OUTPUT=$2;
+
+START_SECONDS=30
+LENGTH_SECONDS=20;
+SCALE=320;
+FPS=10;
+
+palette=$(mktemp --suffix .png -p '/tmp' palette-XXX); 
+
+ffmpeg -y -loglevel 16 -stats -ss $START_SECONDS -t $LENGTH_SECONDS -i "${FILE}" -vf fps=${FPS},scale=${SCALE}:-1:flags=lanczos,palettegen "${palette}"
+ffmpeg -loglevel 16 -stats -ss $START_SECONDS -t $LENGTH_SECONDS -i "${FILE}" -i "${palette}" -filter_complex "fps=${FPS},scale=${SCALE}:-1:flags=lanczos[x];[x][1:v]paletteuse" "${OUTPUT}"
+
+rm "${palette}";
+
