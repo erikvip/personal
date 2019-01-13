@@ -22,6 +22,8 @@ ESTIMATED_TARGET_SIZE="0.32";
 VERBOSE="false"
 
 SCRIPT_START_TIME=$(date '+%s');
+REMAINING="";
+REMAININGLEN="";
 
 main() {
     convert_to_x264
@@ -35,8 +37,7 @@ convert_to_x264() {
 
     debug "${bold}Command:$normal ${CONVERT_CMD}"
 
-#    NOHUP_FILE=$(tempfile -p "x264-" -s ".out");
-    NOHUP_FILE=$(mktemp x264-XXXXXXXXXX.out);
+    NOHUP_FILE=$(tempfile -p "x264-" -s ".out");
 
     # Startup in nohup.
     eval nohup ${CONVERT_CMD} > "${NOHUP_FILE}" 2>&1 &
@@ -76,7 +77,21 @@ convert_to_x264() {
   
         echo -ne $cursor_up
         echo -ne "\r${FFSTAT}\n"
-        ProgressBar ${ELAPSEDTIME:=0} ${LENGTH:=0} "Transcoding to ${OUTPUT_FILE}. About ${PERCENT}%% done. (${ELAPSEDTIME} / ${LENGTH})"
+#        echo -ne "\033[2K"
+#        ProgressBar ${ELAPSEDTIME:=0} ${LENGTH:=0} "Transcoding to ${OUTPUT_FILE:0:15}. About ${PERCENT}%% done. (${ELAPSEDTIME} / ${LENGTH})"
+#        ProgressBar ${ELAPSEDTIME:=0} ${LENGTH:=0} "Transcoding...about ${PERCENT}%% done. (${ELAPSEDTIME} / ${LENGTH})"   
+
+        REMAININGLEN="${#REMAINING}";
+        REMAINING=$(TimeRemaining ${SCRIPT_START_TIME} ${PERCENT});
+
+        # If new line is longer than last line, clear the entire line
+        # Doing this only when necessary prevents a 'flash' as line is cleared
+        if [ $REMAININGLEN -gt "${#REMAINING}" ]; then
+            echo -ne "\033[2K"
+        fi;
+       
+
+        ProgressBar ${ELAPSEDTIME:=0} ${LENGTH:=0} "${PERCENT}%% done. About ${REMAINING} left."
         sleep 1
     done
 
@@ -96,8 +111,37 @@ convert_to_x264() {
     fi
 }
 
+function TimeRemaining() {
+    local _start=$1; 
+    local _percent=$2; 
+    local _time=$(date '+%s'); 
+    local _elapsed=$(( $_time - $_start )); 
 
-function displaytime {
+    if [ $_elapsed -lt 10 ]; then
+        echo "Calculating..."; 
+    else
+        local _est=$(echo "( ${_time} - ${_start} ) / ( ${_percent} ) * ( 100 - ${_percent} )" | bc -l | xargs printf "%0.0f");
+
+        echo -ne $(displaytimeest "${_est}");
+    fi
+}
+
+function displaytimeest {
+  local T=$1
+  local D=$((T/60/60/24))
+  local H=$((T/60/60%24))
+  local M=$((T/60%60))
+  local S=$((T%60))
+  (( $D > 0 )) && printf '%d d ' $D
+  (( $H > 0 )) && printf '%d hr ' $H
+  (( $M > 0 )) && printf '%d min ' $M
+  # Only show seconds if we have less than 3 minutes left
+  if [ $T -le 180 ]; then 
+    printf '%d s\n' $S
+  fi; 
+}
+
+function displaytimeORIG {
   local T=$1
   local D=$((T/60/60/24))
   local H=$((T/60/60%24))
@@ -107,7 +151,20 @@ function displaytime {
   (( $H > 0 )) && printf '%d hours ' $H
   (( $M > 0 )) && printf '%d minutes ' $M
   (( $D > 0 || $H > 0 || $M > 0 )) && printf 'and '
-  printf '%d seconds\n' $S
+  printf '%d s\n' $S
+}
+
+function displaytime {
+  local T=$1
+  local D=$((T/60/60/24))
+  local H=$((T/60/60%24))
+  local M=$((T/60%60))
+  local S=$((T%60))
+  (( $D > 0 )) && printf '%d days ' $D
+  (( $H > 0 )) && printf '%d hr ' $H
+  (( $M > 0 )) && printf '%d min ' $M
+  #(( $D > 0 || $H > 0 || $M > 0 )) && printf 'and '
+  printf '%d sec\n' $S
 }
 
 # Cleanup for full and partial runs
@@ -159,7 +216,7 @@ finish() {
 
 # Validate command line and setup global variables
 setup() {
-    #INPUT_FILE="${1:-}"
+    INPUT_FILE="${1:-}"
     OUTPUT_FILE=""
 
     optparse.define short=i long=input desc="The input file to transcode (Required)" required="true" variable=INPUT_FILE value=""
