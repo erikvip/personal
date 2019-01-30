@@ -3,3 +3,8 @@
 "\e[B": history-search-forward
 set show-all-if-ambiguous on
 set completion-ignore-case on
+
+"\e[15~": dump-functions
+
+"\e[1;3C": shell-forward-word
+"\e[1;3D": shell-backward-word

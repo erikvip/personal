@@ -59,6 +59,20 @@ above anonymous grant seemed to fix MPD.
 * pulseaudio --kill will only control instances owned by the current user. 
 * sudo killall pulseaudio && pulseaudio --start 
 * sudo usermod -G audio <username>
+* Verify mpd is set to use Pulseaudio, and *not* ALSA directly. 
+** The ALSA config may work, but it blocks other apps, and may be blocked itself if a different application is playing audio. Pulse handles talking to ALSA and mixing all the app's sounds together. 
+
+#### Example mpd.conf setup for Pulse audio
+
+```
+audio_output {
+    type        "pulse"
+    name        "My Pulse Output"
+    server      "localhost"     # optional
+    mixer_type  "software"
+}
+```
+
 
 ### Useful commands
 
@@ -86,4 +100,27 @@ sudo apt-get install pulseaudio-equalizer
 Some useful pulseaudio example configs :
 
 https://wiki.archlinux.org/index.php/PulseAudio/Examples#PulseAudio_over_network
+
+
+## PulseAudio MONO Setup
+ATM I'm stuck with only one Monitor since the other broke.  Here's how to create a new 'MONO' sink that's only one channel, so MPD and stuff will sound right. 
+
+### Test setup
+This creates a temporary sink, which will be lost the next time Pulse stops / starts, good for testing -
+
+```
+# pacmd list-sinks | grep name:
+        name: <combined>
+        name: <mono>
+        name: <alsa_output.pci-0000_00_07.0.analog-surround-51>
+# pacmd load-module module-remap-sink sink_name=mono master=alsa_output.pci-0000_00_07.0.analog-surround-51 channels=2 channel_map=mono,mono
+```
+Note the master= attribute should be set to the physical device / sink. 
+
+Should be ready to go now, open the volume/mixer controls (pavucontrol) and set the default stream output to the new remapped interface
+
+To save this change, just put the load-module command from above into /etc/pulse/default.pa & stop/start pulseaudio
+
+
+
 
