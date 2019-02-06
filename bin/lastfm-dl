@@ -36,7 +36,7 @@ echo
 _title=""
 _track=0
 _yturl=""
-_errors_detected=false
+_errors_detected=0
 odir="${_artist} - ${_album}"
 
 trap exit INT
@@ -52,14 +52,16 @@ main() {
 		ytDownload
 	done
 	
-	if [ ${_errors_detected} ]; then
-		mv "${odir}/" "${odir}-(ERRORS)/"
+	if [ ${_errors_detected} -gt 0 ]; then
+		#mv "${odir}/" "${odir}-(ERRORS)/"
 		tput setaf 1
 		echo "Download completed with errors:"
 		tput sgr0
 		echo "Some files might not have downloaded or converted correctly."
 		echo "Check the error.log file for more information"
-		echo -n "Folder has been renamed to "; tput setaf 2; tput bold; echo "${odir}-(ERRORS)/"
+		echo "Error count: ${_errors_detected}"
+
+		#echo -n "Folder has been renamed to "; tput setaf 2; tput bold; echo "${odir}-(ERRORS)/"
 	else
 		tput setaf 2
 		echo "Successfully downloaded ${_artist} - ${_album}"; 
@@ -98,7 +100,7 @@ ytDownload() {
 			echo -n "WARNING: "; tput sgr0; echo "Errors detected during download or post processing phase."
 			echo "File may not have been downloaded correctly"; 
 			echo -e "Errors: \n\tURL: ${_yturl}\n\tFile: $(basename ${dstFile})" >> "${odir}/error.log"; 
-			_errors_detected=true; 
+			_errors_detected=$(( $_errors_detected + 1 ));
 		fi
 	fi
 	echo
