@@ -1,0 +1,87 @@
+#!/bin/bash
+
+####################################################
+# Custom 'sendto' actions in Thunar
+#
+# Add custom 'send to' selections to quickly SCP files 
+# This script is just a shorthand wrapper for SCP, the dsthost should
+# be configured in .ssh/config, and pubkey authentication must be enabled
+# ./sendto <hostname / SSH config name> <files ...>
+# 
+# To create the custom sendto menu item, create a new .desktop file
+# under /usr/share/Thunar/sendto. Example below:
+#
+# # /usr/share/Thunar/sendto/thunar-sendto-scphost.desktop
+# [Desktop Entry]
+# Type=Application
+# Version=1.0
+# Name=Sendto Phone SCP copy
+# Icon=terminal
+# Exec=/home/user/bin/sendto "scp-hostname" %F
+#
+
+setup() {
+    readonly SENDTO_HOST="$1"
+#    readonly SENDTO_FILE="$1"
+
+    [ -z "${SENDTO_HOST}" ] && err "No destination host specified"
+ #   [ -z "${SENDTO_FILE}" ] && err "No filename specified"
+  #  [ ! -e "${SENDTO_FILE}" ] && err "File / path does not exist"
+
+    # Verify host is reachable
+    ping -c 1 -W 1 "${SENDTO_HOST}" &> /dev/null
+    ret=$?
+
+    [ "${ret}" -ne 0 ] && err "Host is unreachable. PING returned ${ret}"
+}
+
+do_file_transfer() {
+    local _file="$1"
+    [ -z "${_file}" ] && err "No filename specified"
+    [ ! -e "${_file}" ] && err "File / path does not exist"
+
+    echo "$@" >> "${SENDTO_LOG}"
+
+    local _scp=$(which scp)
+    ${_scp} "${_file}" "${SENDTO_HOST}:uploads"/ &>> "${SENDTO_LOG}"
+
+    local _ret=$?
+    echo "SCP Return value: ${_ret}" >> "${SENDTO_LOG}"
+
+    if [[ "${_ret}" == 0 ]]; then
+        # Success
+        notify-send --expire-time=2000 -i process-completed "Sendto" "Transfer complete for ${_file}"
+    else
+        # Error
+        notify-send --expire-time=5000 -i dialog-error "Sendto" "Error: sendto file transfer failed. Return status: ${_ret}. Log file: ${SENDTO_LOG}";
+        exit 1        
+    fi
+}
+
+main() {
+	setup "$@"
+    shift; # Pop off hostname
+    SENDTO_LOG=$(tempfile --prefix sendto --suffix .log)
+    notify-send --expire-time=2000 -i process-working-symbolic "Sendto" "Starting secure shell copy to ${SENDTO_HOST}"
+    while [ $# -ge 1 ]; do
+        do_file_transfer "$1"
+        shift
+    done;
+
+    # All transfered completed, remove log file
+    rm "${SENDTO_LOG}"
+}
+
+err() {
+    local _msg="$1"
+    notify-send --expire-time=5000 -i dialog-error "Sendto" "${_msg}"
+    echo "${_msg}"
+    exit 1
+}
+
+main "$@"
+
+
+
+
+
