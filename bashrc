@@ -16,7 +16,7 @@ export PROMPT_COMMAND='history -a'
 export EDITOR="nano"
 
 # Add home bin and user-installed python packages to path
-PYBIN=$(python -c 'import site;import os; print "{}{}bin".format(site.getuserbase(), os.sep)');
+PYBIN=$(python3 -c 'import site;import os; print("{}{}bin".format(site.getuserbase(), os.sep))');
 export PATH="${PATH}:~/bin:${PYBIN}"
 
 # Command shortcuts
@@ -195,9 +195,16 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
 	# Put our homebrew path before our system path so we can override commands via Homebrew
 	export PATH=$(echo $PATH | sed 's|/usr/local/bin||; s|/usr/local/sbin||; s|::|:|; s|^:||; s|\(.*\)|/usr/local/bin:/usr/local/sbin:\1|')
-	
 	export CLICOLOR=1
+
+elif [[ "${OSTYPE}" =~ .*android.* ]]; then
+    PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;33m\]\[\033[01;34m\]\[\033[00m\]\$ '
 fi
+
+
+#
+
+
 
 # Source in site-specific, private variables (API keys and such)
 [ -e ~/.bash_private ] && source ~/.bash_private;
