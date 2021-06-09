@@ -198,7 +198,14 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 	export CLICOLOR=1
 
 elif [[ "${OSTYPE}" =~ .*android.* ]]; then
-    PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;33m\]\[\033[01;34m\]\[\033[00m\]\$ '
+    myhostname="${HOSTNAME}";
+    if [[ -s ".termux/termux.hostname" ]]; then
+        myhostname=$(head -n 1 ".termux/termux.hostname");
+        export HOSTNAME="${myhostname}";        
+    fi
+    #PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;33m\]\[\033[01;34m\]\[\033[00m\]\$ '
+    echo "Termux hostname: ${myhostname}";
+    export PS1='\[\033[01;32m\]\u@'$myhostname'\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;33m\]\[\033[01;34m\]\[\033[00m\]\$ '
 fi
 
 
