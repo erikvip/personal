@@ -199,8 +199,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
 elif [[ "${OSTYPE}" =~ .*android.* ]]; then
     myhostname="${HOSTNAME}";
-    if [[ -s ".termux/termux.hostname" ]]; then
-        myhostname=$(head -n 1 ".termux/termux.hostname");
+    if [[ -s "${HOME}/.termux/termux.hostname" ]]; then
+        myhostname=$(head -n 1 "${HOME}/.termux/termux.hostname");
         export HOSTNAME="${myhostname}";        
     fi
     #PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;33m\]\[\033[01;34m\]\[\033[00m\]\$ '
