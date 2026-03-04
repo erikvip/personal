@@ -1,0 +1,92 @@
+Host *
+        ServerAliveInterval 30
+        ServerAliveCountMax 10
+#	ExitOnForwardFailure yes
+	
+Host alias or.fqdn.com
+	HostName <ip address>
+	Port <port>
+	User <user>
+	PreferredAuthentications publickey
+	IdentityFile /home/<user>/.ssh/id_rsa
+	GSSAPIAuthentication no
+	Compression yes
+	ControlMaster auto
+	ControlPath /home/<user>/.ssh/sockets/ssh_mux_%h_%p_%r
+	ControlPersist yes
+#	IPQoS ef
+	IPQoS cs4
+	DynamicForward 60080
+	LocalForward 63306 localhost:3306
+	LocalForward 60667 localhost:60667
+#	RemoteForward 60022 localhost:22
+#	LocalForward 60066 localhost:6601
+
+Host exampleipv6 ipv6.fqdn.com example6
+        HostName <ipv6 address>
+	AddressFamily inet6
+
+        Port <port>
+        User <user>
+        PreferredAuthentications publickey
+        IdentityFile /home/<user>/.ssh/id_rsa
+        GSSAPIAuthentication no
+        Compression yes
+
+        ControlMaster auto
+        ControlPath /home/<user>/.ssh/sockets/ssh_mux_%h_%p_%r
+        ControlPersist yes
+	IPQoS ef
+        DynamicForward 60080
+#	RemoteForward 60022 localhost:22
+        LocalForward 63306 localhost:3306
+	LocalForward 60667 localhost:60667
+
+
+
+Host piet
+	HostName 10.10.10.2
+	User pie
+	PreferredAuthentications publickey
+        GSSAPIAuthentication no
+
+Host pietwired
+	HostName 10.10.3.2
+	User pie
+	PreferredAuthentications publickey
+	GSSAPIAuthentication no
+
+Host raspi pie 
+	HostName 192.168.42.6
+	User pie
+	PreferredAuthentications publickey
+
+
+
+Host jupiterwired
+	HostName 10.0.2.2
+	User pi
+
+#Match originalhost jupiter exec "[ x$(/bin/ping -c 1 thc.wired.jupiter -w 1 > /dev/null; echo $?) == 0 ]"
+Match originalhost jupiter exec "/bin/ping -c 1 thc.wired.jupiter -w 1 > /dev/null"
+	HostName thc.wired.jupiter
+
+#Host jupiter
+Host tplink tplink.wlan tplink.wlan.thc
+	HostName 192.168.42.90
+	User <user>
+#	PreferredAuthentications publickey
+
+Host luh
+	HostName 192.168.42.11
+	User <user>
+	PreferredAuthentications publickey
+
+# Router
+Host e900 linksys dawn
+	HostName 192.168.42.2
+	user root
+	HostKeyAlgorithms ssh-dss 
+	KexAlgorithms diffie-hellman-group1-sha1
+#	PreferredAuthentications publickey
+

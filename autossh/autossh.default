@@ -1,0 +1,8 @@
+AUTOSSH_POLL=60
+AUTOSSH_FIRST_POLL=30
+AUTOSSH_GATETIME=0
+AUTOSSH_PORT=22207
+AUTOSSH_LOGLEVEL=7
+AUTOSSH_LOG=/var/log/autossh.log
+
+SSH_OPTIONS="-M 22207 -N -v -i /home/<user>/.ssh/id_rsa -R 0.0.0.0:8081:localhost:8081 -R 0.0.0.0:60022:localhost:22 ssh.host.address.ip"
